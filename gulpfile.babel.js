@@ -12,6 +12,8 @@ const nib        = require('nib');
 const rupture    = require('rupture');
 const jeet       = require('jeet');
 
+const ghPages    = require('gulp-gh-pages');
+
 const njRender    = require('gulp-nunjucks-render');
 const nj       = njRender.nunjucks;
 
@@ -71,6 +73,13 @@ gulp.task('sync', function() {
       baseDir: "./dist/"
     }
   });
+});
+
+gulp.task('deploy', ['default'], () => {
+  return gulp.src('dist/**/*')
+    .pipe(ghPages({
+      remoteUrl: 'https://github.com/GOGEN/abc_front.git'
+    }));
 });
 
 gulp.task('serve', ['markup', 'styles', 'images', 'fonts', 'sync', 'watch']);
