@@ -1,0 +1,37 @@
+
+.destinations
+  clearfix()
+  margin-top: 5px
+  height: 275px
+  background: $gray
+  
+  &__item
+    span(1/4)
+    height: 100%
+    padding-top: 140px
+    
+    &--bricks
+      background: img-url("icons/bricks.svg") no-repeat center bottom 170px
+  
+    &--factories
+      background: img-url("icons/factory.svg") no-repeat center bottom 170px
+      
+    &--clients
+      background: img-url("icons/client.svg") no-repeat center bottom 170px
+    
+    &--houses
+      background: img-url("icons/house.svg") no-repeat center bottom 170px
+     
+    &__title,
+    &__sub
+      text-align: center
+     
+    &__title
+      font-size: 34px
+      font-weight: 700
+      
+    &__sub
+      font-size: 16px
+      
+    &__title + &__sub
+      margin-top: 5px

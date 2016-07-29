@@ -1,0 +1,54 @@
+
+.navbar
+  padding: 15px 25px 15px 320px
+  height: 65px
+  background: $white-80
+
+  &__list
+    clearfix()
+
+  &__item
+    position: relative
+    float: left
+    padding: 10px 25px
+    list-style-type: none
+
+    &--active,
+    &:hover
+      &::after
+        display: block
+        content: ""
+        position: absolute
+        bottom: 0
+        right: 25px
+        left: 25px
+        height: 2px
+        background-color: $green
+
+    &>a
+      display: block
+      font-size: 18px
+      font-weight: 500
+      cursor: pointer
+
+    &--cart
+      float: right
+      background: img-url("icons/cart.svg") no-repeat left center
+
+      &>a
+        font-size: 16px
+        font-weight: 300
+        color: $dark-gray
+
+    &__notify
+      position: absolute
+      top: 0
+      left: -5px
+      width: 17px
+      height: @width
+      border-radius(@width)
+      background-color: $green
+      color: $white
+      font-size: 11px
+      line-height: @height
+      text-align: center

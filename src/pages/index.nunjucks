@@ -1,5 +1,20 @@
-{% extends 'layout.nunjucks' %}
+{% extends "layout.nunjucks" %}
 
 {% block content %}
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  {% include "partials/header.html" %}
+  <div class="content">
+    {% include "partials/carousel.html" %}
+    {% include "partials/promotions.html" %}
+    <div class="centered-wrapper">
+      {% include "partials/popular.html" %}
+      {% include "partials/about-block.html" %}      
+      {% include "partials/destinations.html" %}
+    </div>
+    {% include "partials/producers-block.html" %}
+    <div class="centered-wrapper">
+      {% include "partials/geo-sale.html" %}
+      {% include "partials/ask.html" %}
+    </div>
+  </div>
+  {% include "partials/footer.html" %}
 {% endblock %}
