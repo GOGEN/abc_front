@@ -18,6 +18,9 @@
       right: 20px
       top: 50%
       transform: translateY(-50%)
+      
+      +below(1260px)
+        display: none
 
   &__item
     span(1/2)
@@ -26,23 +29,26 @@
     padding: 140px 30px 0 30px
     height: 300px
     background: linear-gradient(bottom, $white, $white-0)
+    
+    +below(1260px)
+      span(1/1)
+      padding: 75px 15px 0 15px
+      height: 250px
+      margin-bottom: 125px
 
     &__cover
       position: absolute
       top: 0
+      right: 20px
       left: 20px
       bottom: 0
-      right: 20px
       background-repeat: no-repeat
       background-size: cover
       z-index: -1
-
-    &__info
-      position: relative
-      float: left
-      margin-left: 20px
-      width: 330px
-      height: 100%
+      
+      +below(1260px)
+        right: 0
+        left: 0
 
     &__img
       float: left
@@ -54,13 +60,38 @@
 
       img
         align()
+        
+      +below(1260px)
+        margin-right: 10px
+
+    &__info
+      position: relative
+      float: left
+      margin-left: 20px
+      width: 330px
+      height: 100%
+      
+      +below(1260px)
+        float: none
+        margin-left: 0
+        width: 100%
 
     &__header>h3
       font-size: 20px
       font-weight: 700
-
+      word-break: break-all
+      
+      +below(1260px)
+        min-height: 160px
+        font-size: 18px
+        
     &__description
       margin-top: 15px
+      
+      +below(1260px)
+        margin: 0 auto
+        position: relative
+        top: 20px
 
       &>tbody>tr
         height: 20px
@@ -76,3 +107,8 @@
       position: absolute
       bottom: 0
       left: 0
+      
+      +below(1260px)
+        right: 0
+        bottom: -90px
+        text-align: center

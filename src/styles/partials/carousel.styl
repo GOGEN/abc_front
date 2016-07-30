@@ -4,11 +4,14 @@
   height: 420px
 
   &__slide
+    position: relative
     height: 100%
     overflow: hidden
 
     img
-      width: 100%
+      align()
+      min-width: 100%
+      height: 100%
 
   &__panel
     position: absolute
@@ -18,33 +21,57 @@
     background-color: $white-80
     clearfix()
 
+    +below(1260px)
+      height: 100px
+
     &__title
       float: left
       padding: 25px 30px
+
+      +below(1260px)
+        float: none
 
       h1
         font-size: 34px
         font-weight: 500
 
-    &__arrows
-      float: right
-      font-size: 0px
+        +below(1260px)
+          text-align: center
 
-      &__item
-        display: inline-block
-        width: 80px
-        height: @width
-        background-color: $white
+  &__arrows
+    position: absolute
+    bottom: 0
+    right: 0
+    font-size: 0px
 
-        & + &
-          margin-left: 1px
+    +below(1260px)
+      bottom: 50%
+      width: 100%
 
-        &--left
-          background-image: img-url('icons/arrow-left.svg')
-          background-repeat: no-repeat
-          background-position: center center
+    &__item
+      display: inline-block
+      width: 80px
+      height: @width
+      background-color: $white
 
-        &--right
-          background-image: img-url('icons/arrow-right.svg')
-          background-repeat: no-repeat
-          background-position: center center
+      +below(1260px)
+        background: none
+
+      & + &
+        margin-left: 1px
+
+      &--left
+        background-image: img-url('icons/arrow-left.svg')
+        background-repeat: no-repeat
+        background-position: center center
+
+        +below(1260px)
+          float: left
+
+      &--right
+        background-image: img-url('icons/arrow-right.svg')
+        background-repeat: no-repeat
+        background-position: center center
+
+        +below(1260px)
+          float: right

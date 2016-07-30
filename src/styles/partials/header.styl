@@ -6,6 +6,9 @@
   height: 131px
   z-index: 1
 
+  +below(1260px)
+    height: 100px
+
   &__logo
     position: absolute
     top: 0
@@ -14,6 +17,13 @@
     padding-left: 60px
     height: 100%
     background-color: $white
+
+    +below(1260px)
+      right: 0
+      padding-top: 10px
+      padding-left: 0
+      width: 100%
+      text-align: center
 
     &::after
       display: block

@@ -12,6 +12,9 @@
     width: 50%
     height: 170px
 
+    +below(1260px)
+      width: 100%
+
     &__info
       position: relative
       width: 270px
@@ -25,15 +28,22 @@
       left: 2px
       background-repeat: no-repeat
       background-size: cover
+      background-position: center right 50%
       z-index: -1
 
     &__header h2
       font-weight: 700
       font-size: 24px
 
+      +below(1260px)
+        font-size: 20px
+
     &__description
       margin-top: 15px
       font-size: 22px
+
+      +below(1260px)
+        font-size: 18px
 
     &__footer
       position: absolute
