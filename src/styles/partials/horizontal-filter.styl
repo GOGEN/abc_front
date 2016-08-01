@@ -1,0 +1,40 @@
+
+.horizontal-filter
+  background: $white
+
+  &__list
+    clearfix()
+
+  &__item
+    float: left
+    position: relative
+    padding: 0 10px
+    height: 55px
+    line-height: @height
+
+    label
+      display: block
+      padding-left: 35px
+      width: 100%
+      height: 100%
+      font-size: 12px
+      cursor: pointer
+
+      &::after
+        display: block
+        content: ""
+        position: absolute
+        left: 15px
+        top: 50%
+        width: 20px
+        height: @width
+        border-radius(3px)
+        border: $gray-two
+        transform: translateY(-50%)
+
+    input[type="checkbox"]
+      position: absolute
+      opacity: 0
+
+      &:checked + label::after
+        background: img-url("icons/check-icon.svg") no-repeat center center

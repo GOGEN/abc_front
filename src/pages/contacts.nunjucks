@@ -1,0 +1,89 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="content">
+    <div class="contacts">
+      <div class="contacts__wrapper">
+        <header class="page-header">
+          <h1>Контакты</h1>
+          <div class="page-header__breadcrumbs">
+            <div class="breadcrumbs">
+              <div class="breadcrumbs__item">
+                <a href="#">Главная</a>
+              </div>
+              <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+              <div class="breadcrumbs__item breadcrumbs__item--active">
+                <a href="#">Контакты</a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="contacts__content">
+          <div class="contacts__main-phones">
+            <h3>Единая справочная</h3>
+            <p>8 800 555-9-129</p>
+            <h4>Беспатный звонок по России</h4>
+            <p>8 (843) 203-96-51</p>
+          </div>
+          <div class="contacts__tabs">
+            <div class="contacts__tabs__menu">
+              <div class="contacts__tabs__menu__item">
+                Отдел продаж Кощаково
+              </div>
+              <div class="contacts__tabs__menu__item">
+                Отдел продаж Челны
+              </div>
+              <div class="contacts__tabs__menu__item contacts__tabs__menu__item--active">
+                Отдел продаж Казань
+              </div>
+              <div class="contacts__tabs__menu__item">
+                Отдел рекламы
+              </div>
+              <div class="contacts__tabs__menu__item">
+                Отдел кадров
+              </div>
+            </div>
+            <div class="contacts__tabs__content">
+              <div class="contacts__tabs__content__col">
+                <h2>Казань</h2>
+                <table>
+                  <tr>
+                    <td>Тел</td>
+                    <td>
+                      240-43-06<br />240-43-07<br />240-43-60
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Факс</td>
+                    <td>8 (84367)- 41-606</td>
+                  </tr>
+                  <tr>
+                    <td>E-mail</td>
+                    <td>koshakovo.keramik@abdev.ru</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="contacts__tabs__content__col">
+                <h2>Режим работы</h2>
+                <table>
+                  <tr>
+                    <td>Пн-Пт</td>
+                    <td>с 7.00 до 19.00</td>
+                  </tr>
+                  <tr>
+                    <td>Сб-Вс</td>
+                    <td>с 7.00 до 16.00</td>
+                  </tr>
+                </table>
+                <div class="contacts__tabs__content__scheme">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "partials/footer.html" %}
+{% endblock %}

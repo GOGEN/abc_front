@@ -1,0 +1,42 @@
+
+.catalog-page
+  margin-top: 65px
+  padding-top: 115px
+  background: $gray
+
+  &__sidebar
+    float: left
+    padding-top: 65px
+    width: 290px
+
+    +below(1260px)
+      display: none
+
+  &__topbar
+    float: right
+    width: 850px
+
+    +below(1260px)
+      display: none
+
+  &__showcase
+    float: right
+    width: 850px
+    margin-left: -10px
+    margin-top: 10px
+
+    +below(1260px)
+      width: 100%
+
+    &__item
+      span(1/2)
+      margin-bottom: 10px
+
+      &:nth-child(2n)
+        padding-left: 5px
+
+      &:nth-child(2n+1)
+        padding-right: 5px
+
+      +below(1260px)
+        span(1/1)

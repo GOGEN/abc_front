@@ -1,0 +1,27 @@
+
+.breadcrumbs
+  padding-top: 15px
+
+  &__item
+    display: inline-block
+    a
+      color: $white
+
+    &--arrow
+      width: 27px
+      height: 10px
+      background: img-url("icons/arrow-right-white.svg") no-repeat center center
+      background-size: contain
+
+  &--black &__item a
+    color: $black
+
+    &:active
+      color: $gray-two
+
+  &--black &__item--active
+    color: $gray-two
+
+  &--black &__item--arrow
+    background: img-url("icons/arrow-right.svg") no-repeat center center
+    background-size: contain

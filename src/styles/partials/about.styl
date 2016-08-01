@@ -1,0 +1,46 @@
+
+.about
+  padding-top: 150px
+
+  &--not-bg
+    background: $gray
+
+  &--bg
+    padding-top: 200px
+    width: 100%
+    background: img-url("media/about_cover_1.jpg") no-repeat left top,
+                img-url("media/about_cover_2.jpg") no-repeat center top,
+                img-url("media/about_cover_3.jpg") no-repeat right top
+    background-size: 33.4% auto
+
+    +below(1260px)
+      margin-top: 100px
+      padding-top: 200px
+      background: img-url("media/about_cover_3.jpg") no-repeat 66% top,
+                  img-url("media/about_cover_2.jpg") no-repeat 33% top,
+                  img-url("media/about_cover_1.jpg") no-repeat left top
+      background-size: auto 415px
+
+  &__wrapper
+    center(1140px)
+
+  &__content
+    padding: 25px 70px
+    background: $white
+
+    +below(1260px)
+      margin-top: 140px
+      padding: 25px
+      background: none
+
+  &__description
+    padding: 45px 150px 140px 150px
+
+    +below(1260px)
+      padding: 0
+
+  &__nav
+    padding: 0 55px
+
+    +below(1260px)
+      display: none

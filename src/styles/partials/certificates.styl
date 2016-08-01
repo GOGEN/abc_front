@@ -1,0 +1,23 @@
+
+.certificates
+  background: $white
+  padding: 20px 0
+  clearfix()
+
+  +below(400px)
+    padding: 10px 0
+
+  &__item
+    col(300/1000, offset: 20/1000, gutter: 0)
+    background: $gray
+    margin-bottom: 20px
+    text-align: center
+
+    +below(980px)
+      col(490/1000, offset: 10/1000, gutter: 0)
+      text-align: center
+
+    +below(400px)
+      span(1/1)
+      text-align: center
+      margin-bottom: 10px
