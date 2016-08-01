@@ -1,11 +1,25 @@
 
-.about
+.page
   padding-top: 150px
+  background: $gray
+  
+  &--anketa
+    +below(1260px)
+      padding-top: 50px
+      
+  &--anketa &__content
+    +below(1260px)
+      margin-top: 50px
+      background: $white
 
-  &--not-bg
-    background: $gray
+  
+  &--contacts-bg
+    padding-top: 200px
+    background: img-url("media/LYB_SFL1.jpg") no-repeat center top
+    background-size: contain
 
-  &--bg
+
+  &--about-bg
     padding-top: 200px
     width: 100%
     background: img-url("media/about_cover_1.jpg") no-repeat left top,
@@ -23,6 +37,29 @@
 
   &__wrapper
     center(1140px)
+    
+
+  &__header
+    padding: 20px 70px
+
+    +below(1260px)
+      text-align: center
+
+    h1
+      font-weight: 700
+      font-size: 34px
+      color: $white
+
+    &--black h1
+      color: $black
+      
+    &--centered
+      text-align: center
+
+    &__breadcrumbs
+      +below(1260px)
+        display: none
+
 
   &__content
     padding: 25px 70px
@@ -32,13 +69,7 @@
       margin-top: 140px
       padding: 25px
       background: none
-
-  &__description
-    padding: 45px 150px 140px 150px
-
-    +below(1260px)
-      padding: 0
-
+      
   &__nav
     padding: 0 55px
 

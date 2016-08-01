@@ -1,0 +1,50 @@
+
+.anketa-form
+  center(720px)
+  padding-bottom: 70px
+    
+  &__header
+    text-align: center
+    margin-bottom: 30px
+    
+    h3
+      display: inline-block
+      padding-bottom: 2px
+      border-bottom: 3px $green solid
+      font-size: 34px
+      text-align: center
+      
+  &__field
+    margin-bottom: 4px
+    clearfix()
+    
+    +below(600px)
+      text-align: center
+    
+    input
+      col(410/720, offset: 10/720, gutter: 0)
+      height: 56px
+      
+      +below(600px)
+        col(1/1, gutter: 0)
+    
+    label
+      col(300/720, gutter: 0)
+      display: block
+      padding: 10px 0
+      
+      +below(600px)
+        col(1/1, gutter: 0)
+        text-align: left
+        
+    &--submit
+      margin-top: 70px
+      text-align: center
+      
+  &__field + &__header
+    margin-top: 50px
+    
+  &__helper
+    margin-top: 17px
+    font-size: 18px
+    color: $gray-two

@@ -1,0 +1,107 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="content">
+    <div class="page page--anketa">
+      <div class="page__wrapper">
+        <header class="page__header page__header--black page__header--centered">
+          <h1>Анкета кандидата для заключения диллерского договора</h1>
+        </header>
+        <div class="page__content page__content">
+          <form class="anketa-form">
+            <header class="anketa-form__header"><h3>Информация о компании</h1></header>
+            <div class="anketa-form__field">
+              <label for="company_info_1">Наименование организации (полное, сокращенное)*</label><input type="text" id="company_info_1"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_2">Генеральный директор (Ф.И.О.)</label><input type="text" id="company_info_2"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_3">Адрес (страна, индекс, область, город, улица, номер дома, офиса)</label><input type="text" id="company_info_3"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_4">ИНН/КПП</label><input type="text" id="company_info_4"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_5">ОГРН (ОГРНИП)</label><input type="text" id="company_info_5"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_6">ОКПО</label><input type="text" id="company_info_6"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_7">Банковские реквизиты</label><input type="text" id="company_info_7"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_8">Телефон (с кодом города)</label><input type="text" id="company_info_8"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_9">Факс</label><input type="text" id="company_info_9"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_10">E-mail</label><input type="text" id="company_info_10"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_11">Web-сайт</label><input type="text" id="company_info_11"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="company_info_12">Численность сотрудников</label><input type="text" id="company_info_12"/>
+            </div>
+            <header class="anketa-form__header"><h3>Контактное лицо</h1></header>
+            <div class="anketa-form__field">
+              <label for="contact_info_1">Фамилия</label><input type="text" id="contact_info_1"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="contact_info_2">Имя*</label><input type="text" id="contact_info_2"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="contact_info_3">Отчество*</label><input type="text" id="contact_info_3"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="contact_info_4">Должность*</label><input type="text" id="contact_info_4"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="contact_info_5">Телефон</label><input type="text" id="contact_info_5"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="contact_info_6">E-mail</label><input type="text" id="contact_info_6"/>
+            </div>
+            <header class="anketa-form__header"><h3>Направление деятельности</h1></header>
+            <div class="anketa-form__field">
+              <label for="activity_info_1">Основная сфера деятельности компании</label><input type="text" id="activity_info_1"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="activity_info_2">Срок работы компании на рынке</label><input type="text" id="activity_info_2"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="activity_info_3">Дилерами каких заводов Вы являетесь в настоящее время</label><input type="text" id="activity_info_3"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="activity_info_4">Предполагаемый регион деятельности*</label><input type="text" id="activity_info_4"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="activity_info_5">Ваши пожелания по совместной работе</label><input type="text" id="activity_info_5"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="activity_info_6">Дополнительные данные</label><input type="text" id="activity_info_6"/>
+            </div>
+            <header class="anketa-form__header"><h3>Имеете ли вы?</h1></header>
+            <div class="anketa-form__field">
+              <label for="ask_info_1">Субдилеров</label><input type="text" id="ask_info_1"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="ask_info_2">Филиалы в других городах</label><input type="text" id="ask_info_2"/>
+            </div>
+            <div class="anketa-form__field">
+              <label for="ask_info_3">Партнеров в других городах</label><input type="text" id="ask_info_3"/>
+            </div>
+            <div class="anketa-form__field anketa-form__field--submit">
+              <button type="submit" class="btn btn--anketa">Отправить заявку</button>
+              <div class="anketa-form__helper">Поля отмеченные * обязательны к заполнению</div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% include "partials/footer.html" %}
+{% endblock %}
