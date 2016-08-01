@@ -5,6 +5,7 @@
   "scripts": {},
   "dependencies": {
     "gulp-gh-pages": "^0.5.4",
+    "jeet": "^6.1.1",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
