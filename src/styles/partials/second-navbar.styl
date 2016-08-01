@@ -16,3 +16,17 @@
       font-size: 18px
       font-weight: 500
       cursor: pointer
+      
+  +below(1260px)
+    position: static
+    padding: 0
+    text-align: center
+    
+    &__item>a
+      font-size: 14px
+      color: $gray-two
+      
+      &:active,
+      &:hover
+        color: $green
+      

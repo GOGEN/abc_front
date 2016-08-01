@@ -1,22 +1,30 @@
 
 .topbar
-  padding: 15px 25px 15px 345px
+  padding: 15px 60px
   height: 65px
   background-color: $white
   clearfix()
-  
-  +below(1260px)
-    display: none
 
   &__catalog,
   &__call
     float: left
 
   &__catalog
-    width: 410px
+    margin-left: 115px
+    
+    &__link
+      display: block
+      height: 36px
+      line-height: @height
+      border-radius(3px)
+      padding-left: 50px
+      padding-right: 25px
+      background: $gray img-url("icons/catalog.svg") no-repeat left center
+      font-size: 18px
+
 
   &__call
-    width: 405px
+    margin-left: 260px
     color: $green
 
     & span
@@ -24,3 +32,102 @@
 
   &__search
     float: right
+    height: 36px
+
+    input
+      padding: 0 10px
+      width: 36px
+      height: 100%
+      border: 0
+      background: $gray img-url("icons/search.svg") no-repeat center center
+
+      &:focus
+        width: 72px
+        outline: 0
+        border: 0
+        
+  &__cart
+    display: none
+
+  +below(1260px)
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+    height: auto
+    background-color: $white
+    text-align: center
+    
+    &__catalog,
+    &__search,
+    &__cart,
+    &__call
+      float: none
+      margin-left: 0
+      height: 50px
+      line-height: 50px
+
+    &__catalog,
+    &__cart
+      order: 1
+      width: 50%
+      border: 1px solid $gray
+    
+    &__search,
+    &__call
+      width: 100%
+      
+    &__call 
+      border: 1px solid $gray
+      border-bottom: 0
+      
+      span
+        padding-left: 20px
+        
+    &__catalog__link
+      display: block
+      height: 48px
+      line-height: @height
+      font-size: 18px
+      
+    &__search
+      order: 2
+
+      input
+        width: 100%
+        background-position: center right 20px
+        
+        &:focus
+          width: 100%
+
+    &__cart
+      display: block
+      position: relative
+      text-align: center
+      
+
+      &>a
+        display: block
+        font-size: 16px
+        font-weight: 300
+        color: $dark-gray
+        
+      &__icon
+        position: relative
+        top: 4px
+        display: inline-block
+        width: 20px
+        height: 20px
+        background: img-url("icons/cart.svg") no-repeat center center
+        
+      &__notify
+        position: absolute
+        top: -5px
+        left: -5px
+        width: 17px
+        height: @width
+        border-radius(@width)
+        background-color: $green
+        color: $white
+        font-size: 11px
+        line-height: @height
+        text-align: center
