@@ -1,0 +1,247 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content">
+      <div class="page page--jobs-bg">
+        <div class="page__wrapper">
+          <header class="page__header">
+            <h1>О компании</h1>
+            <div class="page__header__breadcrumbs">
+              <div class="breadcrumbs">
+                <div class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item breadcrumbs__item--active">
+                  <a href="#">О компании</a>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="page__content">
+            <div class="page__nav">
+              <nav class="navbar navbar--page">
+                <ul class="navbar__list">
+                  <li class="navbar__item">
+                    <a href="#">Заводы и производители</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Наши партнеры</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Дипломы и сертификаты</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Карьера</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Наша команда</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="jobs">
+              <header class="jobs__header">
+                <div class="jobs__header__col">
+                  <div class="jobs__markups">
+                    <h2>Приглашаем в нашу команду</h2>    
+                    <p>Мы убеждены, что основа успеха нашего завода – это его сотрудники.</p>
+                    <p>
+                      Наша команда – это не просто сумма ярких индивидуальностей, которым интересно работать вместе. Нас объединяют единые ценности, общие на всех успехи и временные трудности, нацеленность на общий результат. Мы ценим в наших сотрудниках инициативность, ответственность, порядочность, способность работать в ритме команды, решая задачи, стоящие перед предприятием.<br/>
+                      Если Вы – лидер по жизни, занимаете активную позицию в решении любого вопроса, хотите, что бы ваш труд оценивался по заслугам, тогда мы ждем именно Вас!
+                    </p>
+                  </div>
+                </div>
+                <div class="jobs__header__col">
+                  <div class="jobs__contacts">
+                    <h3>По всем вопросам обращаться:</h3>
+                    <div class="jobs__contacts__row">
+                      8 (552) 55-14-26<br/>
+                      8 962 569-18-76
+                    </div>
+                    <div class="jobs__contacts__row">
+                      SKomarova@abdev.ru
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="jobs__vacancies">
+                <h2>Актуальные вакансии</h2>
+                <ul class="jobs__vacancies__list">
+                  <li class="jobs__vacancies__item">
+                    <input type="checkbox" id="job_vacancy_1">
+                    <label for="job_vacancy_1"></label>
+                    <div class="jobs__vacancies__item__title">Наладчик оборудования</div>
+                    <div class="jobs__vacancies__item__description">
+                      <div class="jobs__markups">
+                        <h2>Требования</h2>
+                        <p>
+                          Возраст: 25 - 50 лет<br/>
+                          Пол: Мужской</br>
+                          Образование: Среднее - профессиональное<br/>
+                          Опыт работы: Не менее 2 года, способность к оперативному и рациональному решению проблем эксплуатации электроустановок.
+                        </p>
+                        <h2>Обязанности</h2>
+                        <p>
+                          Наладка, регулирование и обеспечение бесперебойной работы технологического оборудования.</br>
+                          Смена изношенных частей и узлов механизмов, изготовление и замена мелких запасных частей.</br>
+                          Устранение неисправностей в работе механизмов, участие в ремонте и приемке обслуживаемого оборудования после ремонта.<br/>
+                          Ведение журнала работы оборудования.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="jobs__vacancies__item">
+                    <input type="checkbox" id="job_vacancy_2">
+                    <label for="job_vacancy_2"></label>
+                    <div class="jobs__vacancies__item__title">Электромеханик</div>
+                    <div class="jobs__vacancies__item__description">
+                      <div class="jobs__markups">
+                        <h2>Требования</h2>
+                        <p>
+                          Возраст: 25 - 50 лет<br/>
+                          Пол: Мужской</br>
+                          Образование: Среднее - профессиональное<br/>
+                          Опыт работы: Не менее 2 года, способность к оперативному и рациональному решению проблем эксплуатации электроустановок.
+                        </p>
+                        <h2>Обязанности</h2>
+                        <p>
+                          Наладка, регулирование и обеспечение бесперебойной работы технологического оборудования.</br>
+                          Смена изношенных частей и узлов механизмов, изготовление и замена мелких запасных частей.</br>
+                          Устранение неисправностей в работе механизмов, участие в ремонте и приемке обслуживаемого оборудования после ремонта.<br/>
+                          Ведение журнала работы оборудования.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="jobs__vacancies__item">
+                    <input type="checkbox" id="job_vacancy_3">
+                    <label for="job_vacancy_3"></label>
+                    <div class="jobs__vacancies__item__title">Оператор пульта управления</div>
+                    <div class="jobs__vacancies__item__description">
+                      <div class="jobs__markups">
+                        <h2>Требования</h2>
+                        <p>
+                          Возраст: 25 - 50 лет<br/>
+                          Пол: Мужской</br>
+                          Образование: Среднее - профессиональное<br/>
+                          Опыт работы: Не менее 2 года, способность к оперативному и рациональному решению проблем эксплуатации электроустановок.
+                        </p>
+                        <h2>Обязанности</h2>
+                        <p>
+                          Наладка, регулирование и обеспечение бесперебойной работы технологического оборудования.</br>
+                          Смена изношенных частей и узлов механизмов, изготовление и замена мелких запасных частей.</br>
+                          Устранение неисправностей в работе механизмов, участие в ремонте и приемке обслуживаемого оборудования после ремонта.<br/>
+                          Ведение журнала работы оборудования.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="jobs__vacancies__item">
+                    <input type="checkbox" id="job_vacancy_4">
+                    <label for="job_vacancy_4"></label>
+                    <div class="jobs__vacancies__item__title">
+                      Инспектор предрейсового осмотра водителей (Совместитель)
+                    </div>
+                    <div class="jobs__vacancies__item__description">
+                      <div class="jobs__markups">
+                        <h2>Требования</h2>
+                        <p>
+                          Возраст: 25 - 50 лет<br/>
+                          Пол: Мужской</br>
+                          Образование: Среднее - профессиональное<br/>
+                          Опыт работы: Не менее 2 года, способность к оперативному и рациональному решению проблем эксплуатации электроустановок.
+                        </p>
+                        <h2>Обязанности</h2>
+                        <p>
+                          Наладка, регулирование и обеспечение бесперебойной работы технологического оборудования.</br>
+                          Смена изношенных частей и узлов механизмов, изготовление и замена мелких запасных частей.</br>
+                          Устранение неисправностей в работе механизмов, участие в ремонте и приемке обслуживаемого оборудования после ремонта.<br/>
+                          Ведение журнала работы оборудования.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="jobs__vacancies__item">
+                    <input type="checkbox" id="job_vacancy_5">
+                    <label for="job_vacancy_5"></label>
+                    <div class="jobs__vacancies__item__title">Наладчик КИПиА</div>
+                    <div class="jobs__vacancies__item__description">
+                      <div class="jobs__markups">
+                        <h2>Требования</h2>
+                        <p>
+                          Возраст: 25 - 50 лет<br/>
+                          Пол: Мужской</br>
+                          Образование: Среднее - профессиональное<br/>
+                          Опыт работы: Не менее 2 года, способность к оперативному и рациональному решению проблем эксплуатации электроустановок.
+                        </p>
+                        <h2>Обязанности</h2>
+                        <p>
+                          Наладка, регулирование и обеспечение бесперебойной работы технологического оборудования.</br>
+                          Смена изношенных частей и узлов механизмов, изготовление и замена мелких запасных частей.</br>
+                          Устранение неисправностей в работе механизмов, участие в ремонте и приемке обслуживаемого оборудования после ремонта.<br/>
+                          Ведение журнала работы оборудования.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="jobs__vacancies__item">
+                    <input type="checkbox" id="job_vacancy_6">
+                    <label for="job_vacancy_6"></label>
+                    <div class="jobs__vacancies__item__title">
+                      Электромонтер по ремонту и обслуживанию электрооборудования
+                    </div>
+                    <div class="jobs__vacancies__item__description">
+                      <div class="jobs__markups">
+                        <h2>Требования</h2>
+                        <p>
+                          Возраст: 25 - 50 лет<br/>
+                          Пол: Мужской</br>
+                          Образование: Среднее - профессиональное<br/>
+                          Опыт работы: Не менее 2 года, способность к оперативному и рациональному решению проблем эксплуатации электроустановок.
+                        </p>
+                        <h2>Обязанности</h2>
+                        <p>
+                          Наладка, регулирование и обеспечение бесперебойной работы технологического оборудования.</br>
+                          Смена изношенных частей и узлов механизмов, изготовление и замена мелких запасных частей.</br>
+                          Устранение неисправностей в работе механизмов, участие в ремонте и приемке обслуживаемого оборудования после ремонта.<br/>
+                          Ведение журнала работы оборудования.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="job-request">
+        <div class="centered-wrapper">
+          <form class="job-request__form">
+            <header class="job-request__form__header">
+              <h2>Оставьте заявку на вакансию</h2>                    
+            </header>
+            <div class="job-request__form__field">
+              <input type="text" name="" id="job_request_1" placeholder="Интересующая вакансия">
+            </div>
+            <div class="job-request__form__field">
+              <input type="file" name="" id="job_request_2">
+              <label for="job_request_2">Прикрепить резюме</label>
+            </div>
+            <div class="job-request__form__field">
+              <input type="file" name="" id="job_request_3">
+              <label for="job_request_3">Прикрепить анкету</label>
+            </div>
+            <div class="job-request__form__field">
+              <button type="submit" class="btn btn--green">Отправить</button>
+            </div>
+          </form>          
+        </div>
+      </div>
+    </div>
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock %}

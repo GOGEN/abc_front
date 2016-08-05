@@ -1,0 +1,22 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content">
+      {% include "partials/carousel.html" %}
+      {% include "partials/promotions.html" %}
+      <div class="centered-wrapper">
+        {% include "partials/popular.html" %}
+        {% include "partials/about-block.html" %}
+        {% include "partials/destinations.html" %}
+      </div>
+      {% include "partials/producers-block.html" %}
+      <div class="centered-wrapper">
+        {% include "partials/geo-sale.html" %}
+        {% include "partials/ask.html" %}
+      </div>
+    </div>
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock %}

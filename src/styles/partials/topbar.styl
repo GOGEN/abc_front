@@ -10,7 +10,7 @@
     float: left
 
   &__catalog
-    margin-left: 115px
+    margin-left: 12%
     
     &__link
       display: block
@@ -24,7 +24,7 @@
 
 
   &__call
-    margin-left: 260px
+    margin-left: 33%
     color: $green
 
     & span
@@ -48,8 +48,17 @@
         
   &__cart
     display: none
-
+    
   +below(1260px)
+    padding-left: 35px
+    
+    &__catalog
+      margin-left: 5%
+      
+    &__call
+      margin-left: 20%
+
+  +below(980px)
     display: flex
     flex-wrap: wrap
     padding: 0

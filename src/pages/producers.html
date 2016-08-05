@@ -1,0 +1,87 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content">
+      <div class="page page--about-bg">
+        <div class="page__wrapper">
+          <header class="page__header">
+            <h1>Заводы производители</h1>
+            <div class="page__header__breadcrumbs">
+              <div class="breadcrumbs">
+                <div class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item breadcrumbs__item--active">
+                  <a href="#">О компании</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item breadcrumbs__item--active">
+                  <a href="#">Заводы производители</a>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="page__content">
+            <div class="page__nav">
+              <nav class="navbar navbar--page">
+                <ul class="navbar__list">
+                  <li class="navbar__item">
+                    <a href="#">Заводы и производители</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Наши партнеры</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Дипломы и сертификаты</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Карьера</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="#">Наша команда</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="producers">
+              <div class="producers__list">
+                <div class="producers__item">
+                  <header class="producers__item__header">
+                    <h2>Челнинский кирпичный завод</h2>
+                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="producers__item__cover producers__item__cover--factory"></div>
+                </div>
+                <div class="producers__item">
+                  <header class="producers__item__header">
+                    <h2>Казанский комбинат строительных материалов</h2>
+                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="producers__item__cover producers__item__cover--factory"></div>
+                </div>
+                <div class="producers__item">
+                  <header class="producers__item__header">
+                    <h2>Кощаковский кирпичный завод</h2>
+                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="producers__item__cover producers__item__cover--factory"></div>
+                </div>
+                <div class="producers__item">
+                  <header class="producers__item__header">
+                    <h2>Казанский ДСК</h2>
+                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="producers__item__cover producers__item__cover--kdsk"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock %}

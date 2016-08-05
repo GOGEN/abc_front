@@ -1,0 +1,23 @@
+
+.navigation-checkbox-label
+
+  +below(980px)
+    display: block
+    position: absolute
+    top: 0
+    width: 40px
+    height: 40px
+    z-index: 1
+    cursor: pointer
+    background: img-url("icons/rectangle-1.svg") no-repeat center center,
+                img-url("icons/rectangle-2.svg") no-repeat center center
+                
+.navigation-checkbox-input
+  position: absolute
+  opacity: 0
+
+  +below(980px)
+        
+    &:checked ~ .slide-wrapper
+      position: absolute
+      left: 100%

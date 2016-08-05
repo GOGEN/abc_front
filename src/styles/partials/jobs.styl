@@ -1,0 +1,103 @@
+
+.jobs
+  padding: 35px 0
+  
+  &__header
+    clearfix()
+    
+    &__col
+      col(490/1000, 2, offset: 0)
+      
+      h2
+        font-size: 24px
+        
+  &__markups
+    
+    h2
+      font-size: 24px
+      
+    p
+      font-size: 16px
+      margin-bottom: 25px
+      
+    h2 + p
+      margin-top: 15px
+      
+  &__contacts
+    margin: 0 auto
+    padding: 50px 35px
+    padding-left: 125px
+    max-width: 430px
+    height: 295px
+    box-shadow: 0 10px 40px 5px $gray-two
+    background: $gray img-url("icons/info.svg") no-repeat left 35px top 50px
+    
+    h3
+      font-size: 24px
+      font-weight: 700
+      
+    &__row
+      margin-top: 25px
+    
+  &__vacancies
+    margin-top: 55px
+    
+    h2
+      font-size: 28px
+      
+    &__list
+      margin-top: 40px
+      padding-left: 30px
+    
+    &__item
+      position: relative
+      margin-bottom: 10px
+      padding: 20px 30px
+      background: $gray
+
+      &__title
+        margin-left: 75px
+        height: 44px
+        line-height: @height
+        font-size: 24px
+        font-weight: 700
+        overflow-y: hidden
+        word-break: break-all
+
+      &__description
+        margin-left: 75px
+        overflow-y: hidden
+        transition: max-height .2s ease-out
+        height: auto
+        max-height: 0          
+        
+      input[type="checkbox"]
+        position: absolute
+        opacity: 0
+      
+      label
+        position: absolute
+        top: 20px
+        left: 30px
+        width: 44px
+        height: @width
+        background: img-url("icons/circle-arrow-top.svg") no-repeat center center
+        transform: rotate(90deg)
+        transition: transform .2s ease-out
+        cursor: pointer
+        
+      input[type="checkbox"]:checked + label
+        transform: rotate(0deg)
+        
+      input[type="checkbox"]:checked + label + &__title
+        height: auto
+        overflow-y: auto
+              
+      input[type="checkbox"]:checked + label + &__title + &__description
+        max-height: 500px
+        
+  +below(800px)
+    
+    &__header__col
+      span(1/1)        
+      

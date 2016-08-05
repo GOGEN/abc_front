@@ -12,21 +12,26 @@
       font-size: 24px
       line-height: 125px
 
-      +below(1260px)
-        span(1/1)
-        text-align: center
-
     &--factory,
     &--kdsk
       padding-top: 80px
       font-size: 16px
-
-      +below(1260px)
-        span(1/2)
-        text-align: center
 
     &--factory
       background: img-url("icons/cube.svg") no-repeat center 20px
 
     &--kdsk
       background: img-url("icons/kdsk.svg") no-repeat center 20px
+
+  +below(980px)
+    
+    &__item
+      
+      &--title
+        span(1/1)
+        text-align: center
+        
+      &--factory,
+      &--kdsk
+        span(1/2)
+        text-align: center

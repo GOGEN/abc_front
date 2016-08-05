@@ -1,0 +1,26 @@
+
+.partners
+  padding-top: 20px
+  padding-bottom: 90px
+  clearfix()
+  
+  &__item
+    col(320/1000, 20/1000, offset: 0)
+    position: relative
+    margin-bottom: 20px
+    height: 230px
+    border: 1px solid $gray-two
+    
+    img
+      align()
+      max-width: 100%
+
+  +below(800px)
+    
+    &__item
+      col(380/800, 20/800, offset: 0)
+      
+  +below(400px)
+    
+    &__item
+      span(1/1)

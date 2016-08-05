@@ -5,7 +5,7 @@
   <div class="header__menu">
     <div class="topbar">
       <div class="topbar__catalog">
-        <a href="#" class="topbar__catalog__link">Каталог</a>
+        <a href="/catalog.html" class="topbar__catalog__link">Каталог</a>
       </div>
       <div class="topbar__call">
         <button class="btn btn--gray">Заказать звонок</button>
@@ -26,20 +26,55 @@
     <nav class="navbar navbar--header">
       <ul class="navbar__list">
         <li class="navbar__item">
-          <a href="#">О компании</a>
-          {% include "partials/second-navbar.html"%}
+          <a href="about.html">О компании</a>
+          <div class="navbar__item__secondary">
+            <div class="second-navbar">
+              <ul class="second-navbar__list">
+                <li class="second-navbar__item">
+                  <a href="#">Наша команда</a>
+                </li>
+                <li class="second-navbar__item">
+                  <a href="partners.html">Наши партнеры</a>
+                </li>
+                <li class="second-navbar__item">
+                  <a href="#">Регионы присутствия</a>
+                </li>
+                <li class="second-navbar__item">
+                  <a href="jobs.html">Вакансии</a>
+                </li>
+                <li class="second-navbar__item">
+                  <a href="certificates.html">Дипломы и сертификаты</a>
+                </li>
+                <li class="second-navbar__item">
+                  <a href="#">Художественная студия</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="navbar__item">
-          <a href="#">Диллеры</a>
+          <a href="dealers.html">Диллеры</a>
         </li>
         <li class="navbar__item">
           <a href="#">Пресс-центр</a>
+          <div class="navbar__item__secondary">
+            <div class="second-navbar">
+              <ul class="second-navbar__list">
+                <li class="second-navbar__item">
+                  <a href="news_list.html">Новости</a>
+                </li>
+                <li class="second-navbar__item">
+                  <a href="#">Фотогалерея</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="navbar__item">
           <a href="#">Акции</a>
         </li>
         <li class="navbar__item">
-          <a href="#">Контакты</a>
+          <a href="contacts.html">Контакты</a>
         </li>
         <li class="navbar__item navbar__item--cart">
           <div class="navbar__item__notify">17</div>
@@ -49,3 +84,5 @@
     </nav>
   </div>
 </header>
+<label class="navigation-checkbox-label" for="header_menu"></label>
+<input type="checkbox" id="header_menu" class="navigation-checkbox-input">

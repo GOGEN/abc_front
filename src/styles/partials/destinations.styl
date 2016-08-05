@@ -2,16 +2,12 @@
 .destinations
   clearfix()
   margin-top: 5px
-  height: 275px
   background: $gray
 
   &__item
     span(1/4)
-    height: 100%
+    height: 285px
     padding-top: 140px
-
-    +below(1260px)
-      span(1/1)
 
     &--bricks
       background: img-url("icons/bricks.svg") no-repeat center bottom 170px
@@ -38,3 +34,13 @@
 
     &__title + &__sub
       margin-top: 5px
+  
+  +below(980px)
+  
+    &__item
+      span(1/2)
+
+  +below(400px)
+    
+    &__item
+      span(1/1)

@@ -1,0 +1,35 @@
+
+.news-list
+  padding: 50px 0
+  column-width: 290px
+  column-count: 3
+  column-gap: 40px  
+  
+  &__item
+    display: inline-block
+    margin-bottom: 40px
+    padding: 20px
+    background: $gray
+    
+    &__publish-date
+      font-size: 16px
+      
+    &__title
+      margin-top: 25px
+      font-size: 24px
+      word-break: break-all
+
+    &__cover
+      margin: 0 -20px
+      margin-top: 40px
+      margin-bottom: -20px
+      
+      img
+        width: 100%
+  
+  +below(620px)
+    column-count: 2
+    
+  +below(480px) 
+    margin: 0 40px
+    column-count: 1     
