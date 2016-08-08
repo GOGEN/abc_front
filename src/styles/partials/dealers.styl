@@ -46,6 +46,7 @@
     
   &__item
     col(235/1000, 20/1000, offset: 0)
+    display: block
     position: relative
     margin-top: 20px
     padding: 5px
@@ -57,6 +58,7 @@
       max-width: 90%
       
   &__popup
+    display: none
     position: absolute
     top: 0
     right: 0
@@ -65,14 +67,13 @@
     padding: 35px
     background: $gray
     
+    &:target
+      display: block
+    
     &__close
       position: absolute
       top: 10px
       right: 10px
-      width: 20px
-      height: @width
-      border-radius(@width)
-      background: $gray-two img-url("icons/close.svg") no-repeat center center
       
     &__about
       padding: 75px 70px 75px 50px

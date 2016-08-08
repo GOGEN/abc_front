@@ -5,7 +5,8 @@
 
   +below(980px)
     center(980px, pad=10px)
-    
+    position: relative
+
 .about-wrapper
   padding: 45px 150px 140px 150px
 
@@ -20,3 +21,9 @@
     transition: left .2s ease-in-out
     overflow-x: hidden
     left: 0
+    
+.fluid-wrapper
+  padding: 0 60px
+
+  +below(980px)
+    padding: 0 10px

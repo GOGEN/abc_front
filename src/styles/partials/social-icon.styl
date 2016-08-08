@@ -3,13 +3,19 @@
   display: block
   width: 40px
   height: 40px
-  background: $gray
+  background-color: $gray-four
+  background-repeat: no-repeat
+  background-position: center center
   
   &--fb
-    background: $gray img-url("icons/fb-icon.svg") no-repeat center center
+    background-image: img-url("icons/fb-icon.svg")
   
   &--vk
-    background: $gray img-url("icons/vk-icon.svg") no-repeat center center
-  
+    background-image: img-url("icons/vk-icon.svg")
+
   &--inst
-    background: $gray img-url("icons/inst-icon.svg") no-repeat center center
+    background-image: img-url("icons/inst-icon.svg")
+    
+  &:hover
+    background-color: $gray
+    opacity: .75

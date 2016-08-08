@@ -1,0 +1,8 @@
+{
+  "name": "abc_front",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "slick-carousel": "^1.6.0"
+  }
+}

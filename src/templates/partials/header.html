@@ -1,6 +1,11 @@
 <header class="header">
   <div class="header__logo">
-    <div class="logo"></div>
+    <a href="index.html"><div class="logo"></div></a>
+  </div>
+  <div class="header__cart">
+    <a class="link-cart-mobile" href="cart.html">
+      <div class="link-cart-mobile__notify">17</div>
+    </a>
   </div>
   <div class="header__menu">
     <div class="topbar">
@@ -8,7 +13,7 @@
         <a href="/catalog.html" class="topbar__catalog__link">Каталог</a>
       </div>
       <div class="topbar__call">
-        <button class="btn btn--gray">Заказать звонок</button>
+        <a href="#modal_call" class="link-call">Заказать звонок</a>
         <span>8 800 555 91 25</span>
       </div>
       <div class="topbar__search">
@@ -25,19 +30,19 @@
     </div>
     <nav class="navbar navbar--header">
       <ul class="navbar__list">
-        <li class="navbar__item">
+        <li class="navbar__item navbar__item--active">
           <a href="about.html">О компании</a>
           <div class="navbar__item__secondary">
             <div class="second-navbar">
               <ul class="second-navbar__list">
                 <li class="second-navbar__item">
-                  <a href="#">Наша команда</a>
+                  <a href="team.html">Наша команда</a>
                 </li>
                 <li class="second-navbar__item">
                   <a href="partners.html">Наши партнеры</a>
                 </li>
                 <li class="second-navbar__item">
-                  <a href="#">Регионы присутствия</a>
+                  <a href="regions.html">Регионы присутствия</a>
                 </li>
                 <li class="second-navbar__item">
                   <a href="jobs.html">Вакансии</a>
@@ -63,26 +68,28 @@
                 <li class="second-navbar__item">
                   <a href="news_list.html">Новости</a>
                 </li>
-                <li class="second-navbar__item">
-                  <a href="#">Фотогалерея</a>
+                <li class="second-navbar__item second-navbar__item--active">
+                  <a href="press_photo.html">Фотогалерея</a>
                 </li>
               </ul>
             </div>
           </div>
         </li>
         <li class="navbar__item">
-          <a href="#">Акции</a>
+          <a href="special_offers.html">Акции</a>
         </li>
         <li class="navbar__item">
           <a href="contacts.html">Контакты</a>
         </li>
-        <li class="navbar__item navbar__item--cart">
-          <div class="navbar__item__notify">17</div>
-          <a href="#">Корзина</a>
+        <li class="navbar__item navbar__item--cart navbar__item--active">
+          <a href="cart.html">
+            <div class="navbar__item__notify">17</div>
+            Корзина
+          </a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
-<label class="navigation-checkbox-label" for="header_menu"></label>
 <input type="checkbox" id="header_menu" class="navigation-checkbox-input">
+<label class="navigation-checkbox-label" for="header_menu"></label>

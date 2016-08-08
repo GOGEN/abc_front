@@ -1,0 +1,71 @@
+
+.team
+  center(845px, pad=15px)
+  clearfix()
+  
+  &__item
+    col(245/835, 3, offset: 0, cycle: 3, gutter: 5.5%)
+    margin-bottom: 15px
+    padding: 10px
+    max-width: 245px
+    height: 385px
+    background: $gray
+    
+    &__photo
+      position: relative
+      height: 200px
+      overflow: hidden
+      
+      img
+        align()
+        min-width: 100%
+        min-height: 100%
+        
+      &--empty-w,
+      &--empty-m
+        background-color: $white
+        background-repeat: no-repeat
+        background-position: center center
+        
+      &--empty-w
+        background-image: img-url("icons/woman-icon.svg")
+        
+      &--empty-m
+        background-image: img-url("icons/man-icon.svg")
+        
+    &__info
+      padding: 0 15px
+      text-align: center
+
+      &__name
+        margin-top: 20px
+        font-size: 18px
+        font-weight: 700
+        
+      &__position
+        margin-top: 25px
+        font-size: 16px
+      
+      &__contact
+        margin-top: 2px
+        font-size: 14px
+        color: $gray-two
+  
+  +below(880px)
+    
+    &__item
+      col(260/800, 3, offset: 0, cycle: 3, gutter: 1%)
+      max-width: 260px
+      margin-bottom: 10px
+      
+  +below(750px)
+    center(500px, pad=10px)
+
+    &__item
+      col(350/720, 2, offset: 0, uncycle: 3, cycle: 2, gutter: 2%)
+      
+  +below(550px)
+    center(265px, pad=10px)
+    
+    &__item
+      col(1/1, 2, offset: 0, uncycle: 2, cycle: 1, gutter: 0)

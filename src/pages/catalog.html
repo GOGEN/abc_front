@@ -5,11 +5,13 @@
   <div class="slide-wrapper">
     <div class="content catalog-page">
       <div class="centered-wrapper">
+        <input class="catalog-page__filter-dd" type="radio" name="catalog_filter" id="catalog_categories">
+        <label for="catalog_categories">Категории</label>
         <div class="catalog-page__sidebar">
           <div class="vertical-filter">
             <ul class="vertical-filter__list">
               <li class="vertical-filter__item">
-                <input type="checkbox" id="catalog_vf_0"/>
+                <input type="checkbox" id="catalog_vf_0" disabled/>
                 <label for="catalog_vf_0">Кирпич рядовой</label>
               </li>
               <li class="vertical-filter__item">
@@ -43,11 +45,13 @@
             </ul>
           </div>
         </div>
+        <input class="catalog-page__filter-dd catalog-page__filter-dd--right", type="radio" name="catalog_filter" id="catalog_factories">
+        <label for="catalog_factories">Производители</label>
         <div class="catalog-page__topbar">
           <div class="horizontal-filter">
             <ul class="horizontal-filter__list">
               <li class="horizontal-filter__item">
-                <input type="checkbox" id="catalog_hf_0"/>
+                <input type="checkbox" id="catalog_hf_0" disabled/>
                 <label for="catalog_hf_0">Все производители</label>
               </li>
               <li class="horizontal-filter__item">

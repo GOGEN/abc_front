@@ -14,6 +14,7 @@
 
     label
       display: block
+      position: relative
       padding-left: 35px
       width: 100%
       height: 100%
@@ -24,7 +25,7 @@
         display: block
         content: ""
         position: absolute
-        left: 15px
+        left: 5px
         top: 50%
         width: 20px
         height: @width
@@ -35,6 +36,43 @@
     input[type="checkbox"]
       position: absolute
       opacity: 0
+      
+      &:disabled + label
+        color: $gray-two
 
       &:checked + label::after
         background: img-url("icons/check-icon.svg") no-repeat center center
+        
+  +below(1080px)
+    
+    &__item
+      padding: 0 5px
+      
+      label
+        padding-left: 30px
+        
+        &::after
+          left: 0
+
+  +below(980px)
+    padding: 0
+    background: $white
+    box-shadow: 0 4px 6px 0 $dark-gray
+
+    &__item
+      display: block
+      float: none
+      height: 40px
+      line-height: @height
+      border: 0
+      
+      &:first-child
+        border: 0
+      
+      label
+        padding-right: 10px
+        padding-left: 40px
+        font-size: 16px
+        
+        &::after
+          left: 15px

@@ -18,11 +18,17 @@
     &__secondary
       display: none
     
+    &:hover>&__secondary,
     &>a:hover + &__secondary
       display: block
 
+    &>a:hover
+      color: $black-two
+
+    &--active>a,
     &>a:hover,
     &>a:active
+      
       &::after
         display: block
         content: ""
@@ -41,18 +47,33 @@
 
     &--cart
       float: right
-      background: img-url("icons/cart.svg") no-repeat left center
+      width: 150px
+      padding: 0
+      
+      &.navbar__item--active
+        background-color: $gray
+      
+      &.navbar__item--active>a,
+      &>a:hover,
+      &>a:active
+        color: $black
+        
+        &::after
+          display: none
 
 
       &>a
+        padding-left: 50px
+        padding-right: 20px
         font-size: 16px
         font-weight: 300
         color: $dark-gray
+        background: img-url("icons/cart.svg") no-repeat left 25px center
 
     &__notify
       position: absolute
       top: 15px
-      left: -5px
+      left: 20px
       width: 17px
       height: @width
       border-radius(@width)
@@ -84,6 +105,7 @@
     float: none
     padding: 0 1%
     
+    &--active>a,
     &>a:active,
     &>a:hover
       &::after
@@ -102,6 +124,14 @@
       
     &--header &__item
       padding: 0 2%
+      
+      &--cart
+        padding: 0
+        width: 70px
+        overflow: hidden
+        
+        a 
+          font-size: 0
     
   +below(980px)
     
@@ -119,6 +149,7 @@
       &--cart
         display: none
               
+      &--active>a,
       &>a:hover,
       &>a:active
         color: $green

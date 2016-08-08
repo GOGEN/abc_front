@@ -4,8 +4,12 @@
 
   &__item
     display: inline-block
+    
     a
       color: $white
+    
+    &--active a
+      color: $gray-two
 
     &--arrow
       width: 27px
@@ -13,14 +17,15 @@
       background: img-url("icons/arrow-right-white.svg") no-repeat center center
       background-size: contain
 
-  &--black &__item a
-    color: $black
+  &--black &__item 
 
-    &:active
+    a
+      color: $black    
+
+    &--active a
       color: $gray-two
 
-  &--black &__item--active
-    color: $gray-two
+
 
   &--black &__item--arrow
     background: img-url("icons/arrow-right.svg") no-repeat center center

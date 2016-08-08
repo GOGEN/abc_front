@@ -28,9 +28,13 @@
     &--social &__list
       clearfix()
 
-    &__title
+    &__title,
     &__text-item
       line-height: 30px
+      
+      &>a:hover,
+      &>a:active
+        color: $black-two
 
     &__icon-item
       float: left
@@ -41,8 +45,6 @@
   &__requisites
     float: right
     padding: 10px 0
-    padding-right: 25px
-    background: img-url("icons/link.svg") no-repeat right center
 
   &__call
     float: left

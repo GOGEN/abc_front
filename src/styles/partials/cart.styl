@@ -1,0 +1,151 @@
+
+
+.cart
+  padding-bottom: 90px
+  
+  &__item-col
+    span(590/1000)
+    
+  &__count-col
+    span(250/1000)
+    
+  &__price-col
+    span(160/1000)
+    
+  &__header
+    padding: 25px 0
+    padding-right: 80px
+    font-size: 24px
+    clearfix()
+    
+  &__item
+    position: relative
+    padding: 10px 80px 10px 10px
+    background: $white
+    clearfix()
+    
+    & + &
+      margin-top: 5px
+      
+    &__remove
+      position: absolute
+      right: 25px
+      top: 50%
+      transform: translateY(-50%)
+      width: 21px
+      height: @width
+      border-radius(@width)
+      border: 0
+      outline: 0
+      background: $gray img-url("icons/close.svg") no-repeat center center
+      
+    &__info
+      clearfix()
+      
+      &__cover
+        float: left
+        width: 120px
+        height: @width
+        
+        img
+          aligin()
+          
+      &__prop
+        max-width: 280px
+        
+        &__title
+          margin-top: 25px
+          font-size: 16px
+          font-weight: 700
+          
+        &__price
+          margin-top: 20px
+          font-size: 16px
+          color: $gray-two
+      
+      &__cover + &__prop
+        margin-left: 145px
+        
+    &__count
+      margin-top: 40px
+      
+      input[type="number"]
+        width: 125px
+        height: 40px
+        border: 1px solid $gray-two
+        border-radius(3px)
+        outline: 0
+        font-size: 16px
+        
+      &__measure
+        margin-top: 14px
+        width: 125px
+        text-align: center
+
+    &__price
+      margin-top: 50px
+      font-size: 16px
+      
+  &__person
+    margin-top: 5px
+    padding: 25px
+    background: $white
+    clearfix()
+    
+    &__field
+      col(340/1030, 3, offset: 0, gutter: .4%)
+      
+      input
+        margin: 5px 0
+        padding: 0 20px
+        width: 100%
+        height: 55px
+        font-size: 20px
+        
+  &__total
+    padding: 15px 25px
+    background: $white
+    text-align: center
+    font-size: 24px
+    color: $gray-two
+    
+    &__value
+      display: inline-block
+      margin-left: 50px
+      color: $black
+      
+  &__submit
+    padding: 15px 25px 30px
+    background: $white
+    text-align: center
+    
+  +below(680px)
+  
+    &__count-col,
+    &__item-col,
+    &__price-col
+      span(1/1)
+    
+    &__header
+      display: none
+      
+    &__item
+      padding-top: 50px
+      padding-right: 10px
+      
+      &__remove
+        top: 20px
+        right: 20px
+        
+      &__price,
+      &__count
+        margin-top: 20px
+        text-align: center
+        
+      &__count__measure
+        display: inline-block
+        
+    &__person
+      
+      &__field
+        span(1/1)

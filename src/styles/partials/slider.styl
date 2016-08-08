@@ -1,0 +1,51 @@
+
+.slider
+  
+  &__header h1
+    font-weight: 700px
+    font-size: 34px
+  
+  &__item
+    position: relative
+    margin-right: 1%
+    width: 24%
+    height: 165px
+    overflow: hidden
+    
+    img
+      align()
+      
+  &__content
+    position: relative
+    margin: 90px 0
+    padding: 0 60px
+      
+  &__arrow
+    position: absolute
+    top: 52.5px
+    width: 40px
+    height: 40px
+    background: $gray
+    background-size: 30px
+    background-repeat: no-repeat
+    background-position: center center
+    border: 0
+    outline: 0
+    cursor: pointer
+    
+    &--left
+      left: 0
+      background-image: img-url("icons/arrow-left-green.svg")
+    
+      &.slick-disabled
+        background-image: img-url("icons/arrow-right-white.svg")
+        transform: rotate(180deg)
+
+    &--right
+      right: 0
+      background-image: img-url("icons/arrow-left-green.svg")
+      transform: rotate(180deg)
+      
+      &.slick-disabled
+        background-image: img-url("icons/arrow-right-white.svg")
+        transform: rotate(0)

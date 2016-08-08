@@ -1,11 +1,10 @@
 
 .carousel
   position: relative
-  height: 420px
-
-  &__slide
+  
+  &__item
     position: relative
-    height: 100%
+    height: 420px
     overflow: hidden
 
     img
@@ -13,30 +12,18 @@
       min-width: 100%
       height: 100%
 
-  &__panel
-    position: absolute
-    bottom: 0
-    width: 100%
-    height: 80px
-    background-color: $white-80
-    clearfix()
-
-    +below(1260px)
-      height: 100px
-
     &__title
-      float: left
+      position: absolute
+      bottom: 0
       padding: 25px 30px
-
-      +below(1260px)
-        float: none
+      padding-right: 180px
+      width: 100%
+      height: 80px
+      background-color: $white-80
 
       h1
         font-size: 34px
         font-weight: 500
-
-        +below(1260px)
-          text-align: center
 
   &__arrows
     position: absolute
@@ -44,18 +31,15 @@
     right: 0
     font-size: 0px
 
-    +below(1260px)
-      bottom: 50%
-      width: 100%
-
     &__item
       display: inline-block
       width: 80px
       height: @width
       background-color: $white
-
-      +below(1260px)
-        background: none
+      cursor: pointer
+      
+      &:hover
+        background-color: $gray
 
       & + &
         margin-left: 1px
@@ -65,13 +49,36 @@
         background-repeat: no-repeat
         background-position: center center
 
-        +below(1260px)
-          float: left
 
       &--right
         background-image: img-url('icons/arrow-right.svg')
         background-repeat: no-repeat
         background-position: center center
 
-        +below(1260px)
+          
+  +below(980px)
+    
+    &__item
+      
+      &__title
+        min-height: 100px
+        padding-right: 30px
+        
+        h1
+          text-align: center
+          
+    &__arrows
+      bottom: 50%
+      width: 100%
+      
+      &__item
+        background-color: transparent
+        
+        &:hover
+          background-color: transparent
+        
+        &--left
+          float: left
+          
+        &--right
           float: right

@@ -1,0 +1,87 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content">
+      <div class="page page--not-bg">
+        <div class="page__wrapper">
+          <header class="page__header page__header--black">
+            <h1>Регионы присутствия</h1>
+            <div class="page__header__breadcrumbs">
+              <div class="breadcrumbs breadcrumbs--black">
+                <div class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item">
+                  <a href="#">О компании</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item breadcrumbs__item--active">
+                  <a href="#">Регионы присутствия</a>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="page__content">
+            <div class="regions">
+              <div class="regions__list">
+                <div class="regions__item">
+                  <header class="regions__item__header">
+                    <h2>Кирпич в Йошкар-Оле</h2>
+                    <div class="regions__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="regions__item__cover">
+                    <img src="images/media/region_1.jpg">
+                    <div class="regions__item__cover__compas"></div>
+                  </div>
+                </div>
+                <div class="regions__item">
+                  <header class="regions__item__header">
+                    <h2>Кирпич в Чебоксарах</h2>
+                    <div class="regions__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="regions__item__cover">
+                    <img src="images/media/region_2.jpg">
+                    <div class="regions__item__cover__compas"></div>
+                  </div>
+                </div>
+                <div class="regions__item">
+                  <header class="regions__item__header">
+                    <h2>Кирпич в Ижевске</h2>
+                    <div class="regions__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="regions__item__cover">
+                    <img src="images/media/region_3.jpg">
+                    <div class="regions__item__cover__compas"></div>
+                  </div>
+                </div>
+                <div class="regions__item">
+                  <header class="regions__item__header">
+                    <h2>Кирпич в Ульяновске</h2>
+                    <div class="regions__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="regions__item__cover">
+                    <img src="images/media/region_4.jpg">
+                    <div class="regions__item__cover__compas"></div>
+                  </div>
+                </div>
+                <div class="regions__item">
+                  <header class="regions__item__header">
+                    <h2>Кирпич в Кирове</h2>
+                    <div class="regions__item__header__goto"><a href="#"></a></div>
+                  </header>
+                  <div class="regions__item__cover">
+                    <img src="images/media/region_5.jpg">
+                    <div class="regions__item__cover__compas"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock %}
