@@ -15,7 +15,9 @@
       text-align: center
       
   &__field
-    margin-bottom: 4px
+    margin-bottom: 10px
+    height: 56px
+    line-height: @height
     clearfix()
     
     +below(600px)
@@ -23,18 +25,26 @@
     
     input
       col(410/720, offset: 10/720, gutter: 0)
+      display: inline-block
+      float: none
       height: 56px
+      line-height: normal
       
       +below(600px)
         col(1/1, gutter: 0)
-    
+        display: block
+        
     label
       col(300/720, gutter: 0)
-      display: block
-      padding: 10px 0
+      display: inline-block
+      float: none
+      line-height: normal
+      vertical-align: middle
       
       +below(600px)
         col(1/1, gutter: 0)
+        display: block
+        padding: 10px 0
         text-align: left
         
     &--submit

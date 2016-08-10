@@ -1,5 +1,6 @@
 
 .vertical-filter
+  display: none
   padding-right: 20px
 
   &__item
@@ -47,6 +48,7 @@
         transform: translateY(-50%)
 
   +below(980px)
+    display: block
     padding: 0
     background: $white
     box-shadow: 0 4px 6px 0 $dark-gray

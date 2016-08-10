@@ -1,8 +1,10 @@
 
 global-reset()
 
-html
-  font normal 300 1rem "Museo", sans-serif;
+html,
+input[type="text"],
+textarea
+  font normal 500 1rem "MuseoSans", sans-serif;
 
 *, *:after, *:before
   box-sizing: border-box
@@ -14,3 +16,6 @@ a
 body
   +below(980px)
     overflow-x: hidden
+    
+h1, h2, h3, h4, h5, h6
+  font normal 500 1rem "Museo", sans-serif;

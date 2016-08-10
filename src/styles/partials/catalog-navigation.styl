@@ -1,0 +1,24 @@
+
+.catalog-navigation
+  padding-bottom: 10px
+  background: $white
+
+  &__item
+    padding: 0 10px
+    height: 35px
+    line-height: @height
+      
+    a
+      display: block
+      padding: 0 10px
+      width: 100%
+      height: 100%
+      font-size: 14px
+      cursor: pointer
+
+    &:first-child a
+      font-size: 16px
+      
+    &>a:hover,
+    &--active>a
+      color: $green

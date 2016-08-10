@@ -17,6 +17,7 @@
             </header>
             <form class="cart__content">
               <div class="cart__item">
+                <input type="hidden" id="cart_item_1_price" value="13.20">
                 <button class="cart__item__remove"></button>
                 <div class="cart__item-col">
                   <div class="cart__item__info">
@@ -31,17 +32,18 @@
                 </div>
                 <div class="cart__count-col">
                   <div class="cart__item__count">
-                    <input type="number" name=""><br/>
+                    <input type="number" id="cart_item_1_count" min="1"><br/>
                     <div class="cart__item__count__measure">штук</div>
                   </div>
                 </div>
                 <div class="cart__price-col">
-                  <div class="cart__item__price">
+                  <div id="cart_item_1_cost" class="cart__item__price">
                     45 619,20 руб
                   </div>
                 </div>
               </div>
                <div class="cart__item">
+                <input type="hidden" id="cart_item_2_price" value="13.20">
                 <button class="cart__item__remove"></button>
                 <div class="cart__item-col">
                   <div class="cart__item__info">
@@ -56,12 +58,12 @@
                 </div>
                 <div class="cart__count-col">
                   <div class="cart__item__count">
-                    <input type="number" name=""><br/>
-                    <div class="cart__item__count__measure">штук</div>
+                    <input type="number" name="" id="cart_item_2_count"><br/>
+                    <div class="cart__item__count__measure" min="1">штук</div>
                   </div>
                 </div>
                 <div class="cart__price-col">
-                  <div class="cart__item__price">
+                  <div id="cart_item_2_cost" class="cart__item__price">
                     45 619,20 руб
                   </div>
                 </div>
@@ -71,7 +73,7 @@
                   <input type="text" name="" placeholder="Ваше имя">
                 </div>
                 <div class="cart__person__field">
-                  <input type="text" name="" placeholder="Ваш телефон">
+                  <input type="text" name="" id="form_field_phone" placeholder="Ваш телефон">
                 </div>
                 <div class="cart__person__field">
                   <input type="text" name="" placeholder="Ваш E-mail">
@@ -79,7 +81,7 @@
               </div>
               <div class="cart__total">
                 Итого
-                <div class="cart__total__value">332 851,20 руб</div>
+                <div class="cart__total__value" id="cart_total_cost">332 851,20 руб</div>
               </div>
               <div class="cart__submit">
                 <button type="submit" class="btn btn--cart" disabled>КУПИТЬ</button>

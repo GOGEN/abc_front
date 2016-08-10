@@ -5,8 +5,7 @@
   background-color: $white
   clearfix()
 
-  &__catalog,
-  &__call
+  &__catalog
     float: left
 
   &__catalog
@@ -27,32 +26,69 @@
         background-color: $gray
 
   &__call
-    margin-left: 25%
+    float: right
+    margin-right: 90px
     color: $green
     
     & span
       padding-left: 25px
 
   &__search
+    position: relative
     float: right
     height: 36px
+    
+    button
+      display: block
+      position: absolute
+      border: 0
+      outline: 0
+      cursor: pointer
+      transition: opacity .3 linear
+      opacity: 0
+      z-index: -1
+      
+    button[type="submit"]
+      top: 5px
+      right: 40px
+      width: 75px
+      height: 25px
+      border-radius(2px)
+      background: $white
+    
+    button[type="reset"]
+      top: 7.5px
+      right: 10px
+      width: 20px
+      height: @width
+      border-radius(@width)
+      background: $dark-gray img-url("icons/close.svg") no-repeat center center
 
     input
+      position: absolute
+      right: 0
       padding: 0 10px
       width: 36px
-      height: 100%
+      height: 36px
       border: 0
       background: $gray-four img-url("icons/search.svg") no-repeat center center
       transition: width .2s ease-out
+      font-size: 0
       
       &:hover
         background-color: $gray
 
+      &:valid,
       &:focus
-        width: 72px
+        width: 445px
         outline: 0
         border: 0
         background: $gray
+        font-size: 16px
+        
+        &~button
+          opacity: 1
+          z-index: 0
 
   &__cart
     display: none

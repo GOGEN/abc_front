@@ -1,19 +1,29 @@
 
 .header
-  position: absolute
+  position: fixed
   top: 0
   width: 100%
   height: 131px
   z-index: 10
+  transition: height .2s linear
 
   &__logo
     position: absolute
     top: 0
     left: 0
-    padding-top: 30px
+    padding: 30px 0
     padding-left: 60px
+    width: 230px
     height: 100%
     background-color: $white
+    transition: all .2s linear
+    
+    &>a
+      display: block
+      width: 100%
+      height: 100%
+      background: img-url('icons/logo.svg') no-repeat center center
+      background-size: contain
 
     &::after
       display: block
@@ -34,6 +44,32 @@
     
     &--solid
       background-color: $white
+      
+  &--sticky
+    height: 65px
+    background: $white
+    
+  &--sticky &__logo
+    padding-top: 10px
+    padding-bottom: 10px
+    width: 165px
+    height: 100%
+    
+  & .topbar
+    height: 100%
+    max-height: 65px
+    overflow-y: hidden
+    opacity: 1
+    transition: all .2s linear
+    
+  &--sticky &__menu
+    
+    & .topbar
+      padding-top: 0
+      padding-bottom: 0
+      max-height: 0
+      opacity: 0
+      
     
   &__checkbox
     display: none

@@ -19,3 +19,10 @@
   });
 
 })();
+
+(function () {
+  'use strict';
+
+  $('#catalog_fixed_sidebar').stick_in_parent({offset_top: 40});
+
+})();

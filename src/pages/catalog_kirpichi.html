@@ -1,0 +1,124 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content catalog-page">
+      <div class="centered-wrapper">
+        <input class="catalog-page__filter-dd" type="radio" name="catalog_filter" id="catalog_categories">
+        <label for="catalog_categories">Категории</label>
+        <div class="catalog-page__sidebar">
+          <div class="catalog-navigation">
+            <ul class="catalog-navigation__list">
+              <li class="catalog-navigation__item">
+                <a href="catalog.html">Все товары</a>
+              </li>
+              <li class="catalog-navigation__item catalog-navigation__item--active">
+                <a href="catalog_kirpichi.html">Кирпич рядовой</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Кирпич лицевой</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Фундаментные блоки</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Дорожные плиты</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Сваи железобетонные</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Кольца и крыши колец</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Лотки канальные</a>
+              </li>
+              <li class="catalog-navigation__item">
+                <a href="catalog_kirpichi.html">Плиты канальные</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <input class="catalog-page__filter-dd catalog-page__filter-dd--right", type="radio" name="catalog_filter" id="catalog_factories">
+        <label for="catalog_factories">Производители</label>
+        <div class="catalog-page__topbar">
+          <div class="horizontal-filter">
+            <ul class="horizontal-filter__list">
+              <li class="horizontal-filter__item">
+                <input type="checkbox" id="catalog_hf_0" checked/>
+                <label for="catalog_hf_0">Все производители</label>
+              </li>
+              <li class="horizontal-filter__item">
+                <input type="checkbox" id="catalog_hf_1"/>
+                <label for="catalog_hf_1">Кощаковский кирпичный завод</label>
+              </li>
+              <li class="horizontal-filter__item">
+                <input type="checkbox" id="catalog_hf_2" disabled/>
+                <label for="catalog_hf_2">ККСМ</label>
+              </li>
+              <li class="horizontal-filter__item">
+                <input type="checkbox" id="catalog_hf_3"/>
+                <label for="catalog_hf_3">Камастройиндустрия</label>
+              </li>
+              <li class="horizontal-filter__item">
+                <input type="checkbox" id="catalog_hf_4"/>
+                <label for="catalog_hf_4">КДСК</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog-page__showcase">
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+          <div class="catalog-page__showcase__item">
+            {% include "partials/good.html" %}
+          </div>
+        </div>
+      </div>
+  </div>
+  {% include "partials/footer.html" %}
+{% endblock %}
