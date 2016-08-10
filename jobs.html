@@ -11,9 +11,9 @@
   </head>
   <body>
     
-  <header class="header">
+  <header id="header" class="header">
   <div class="header__logo">
-    <a href="index.html"><div class="logo"></div></a>
+    <a href="index.html"></a>
   </div>
   <div class="header__cart">
     <a class="link-cart-mobile" href="cart.html">
@@ -23,14 +23,18 @@
   <div class="header__menu">
     <div class="topbar">
       <div class="topbar__catalog">
-        <a href="/catalog.html" class="topbar__catalog__link">Каталог</a>
-      </div>
-      <div class="topbar__call">
-        <a href="#modal_call" class="link-call">Заказать звонок</a>
-        <span>8 800 555 91 25</span>
+        <a href="catalog.html" class="topbar__catalog__link">Каталог</a>
       </div>
       <div class="topbar__search">
-        <input type="text"/>
+        <form name="search-form">
+          <input name="query" type="text" placeholder="Что вы ищите?" required/>
+          <button type="submit">Поиск</button>
+          <button type="reset"></button>          
+        </form>
+      </div>
+      <div class="topbar__call">
+        <a href="#popup_call" class="link-call">Заказать звонок</a>
+        <span>8 800 555 91 25</span>
       </div>
       <div class="topbar__cart">
         <a href="#">
@@ -64,14 +68,14 @@
                   <a href="certificates.html">Дипломы и сертификаты</a>
                 </li>
                 <li class="second-navbar__item">
-                  <a href="#">Художественная студия</a>
+                  <a href="producers.html">Заводы производители</a>
                 </li>
               </ul>
             </div>
           </div>
         </li>
         <li class="navbar__item">
-          <a href="dealers.html">Диллеры</a>
+          <a href="dealers.html">Дилеры</a>
         </li>
         <li class="navbar__item">
           <a href="#">Пресс-центр</a>
@@ -418,7 +422,7 @@
       </div>
       <div class="footer__call">
         <div class="footer__call__action">
-          <a href="#modal_call" class="link-call">Заказать звонок</a>
+          <a href="#popup_call" class="link-call">Заказать звонок</a>
         </div>
         <div class="footer__call__phone">8 800 555 91 25</div>
       </div>
@@ -432,25 +436,22 @@
 
   </div>
 
-    <div class="modal modal--dark" id="modal_call">
-      <div class="modal__dialog modal__dialog--form">
-        <div class="modal__close"><a href="#"></a></div>
-        <form class="modal__form abc-form">
-          <header class="abc-form__header"><h2>Оставьте контакты и получите скидку</h2></header>
-          <div class="abc-form__field">
-            <input type="text" name="" placeholder="Ваше имя">
-          </div>
-          <div class="abc-form__field">
-            <input type="text" name="" placeholder="Ваше телефон">
-          </div>
-          <div class="abc-form__field">
-            <textarea placeholder="Ваше сообщение"></textarea>
-          </div>
-          <div class="abc-form__field">
-            <button type="submit" class="btn btn--green btn--submit">Отправить</button>
-          </div>
-        </form>
-      </div>
+    <div class="mfp-hide modal__dialog modal__dialog--form" id="popup_call">
+      <form class="modal__form abc-form">
+        <header class="abc-form__header"><h2>Оставьте контакты и получите скидку</h2></header>
+        <div class="abc-form__field">
+          <input type="text" name="" placeholder="Ваше имя">
+        </div>
+        <div class="abc-form__field">
+          <input id="form_field_phone" type="text" name="" placeholder="Ваше телефон">
+        </div>
+        <div class="abc-form__field">
+          <textarea placeholder="Ваше сообщение"></textarea>
+        </div>
+        <div class="abc-form__field">
+          <button type="submit" class="btn btn--green btn--submit">Отправить</button>
+        </div>
+      </form>
     </div>
     <!-- inject:js -->
     <script src="vendor.min.js"></script>
