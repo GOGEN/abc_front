@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="index.css">
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
   </head>
   <body>
     
@@ -26,7 +27,7 @@
         <a href="catalog.html" class="topbar__catalog__link">Каталог</a>
       </div>
       <div class="topbar__search">
-        <form name="search-form">
+        <form name="search-form" action="search.html" novalidate>
           <input name="query" type="text" placeholder="Что вы ищите?" required/>
           <button type="submit">Поиск</button>
           <button type="reset"></button>          
@@ -114,6 +115,9 @@
   <div class="slide-wrapper">
     <div class="content">
       <div class="page page--about-bg">
+        <div class="page__bg">
+          <div class="page__bg__dark"></div>
+        </div>
         <div class="page__wrapper">
           <header class="page__header">
             <h1>Заводы производители</h1>
@@ -137,20 +141,23 @@
             <div class="page__nav">
               <nav class="navbar navbar--page">
                 <ul class="navbar__list">
+                  <li class="navbar__item">
+                    <a href="team.html">Наша команда</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="partners.html">Наши партнеры</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="regions.html">Регионы присутсвия</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="jobs.html">Вакансии</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a href="certificates.html">Дипломы и сертификаты</a>
+                  </li>
                   <li class="navbar__item navbar__item--active">
-                    <a href="#">Заводы и производители</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a href="#">Наши партнеры</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a href="#">Дипломы и сертификаты</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a href="#">Карьера</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a href="#">Наша команда</a>
+                    <a href="producers.html">Заводы производители</a>
                   </li>
                 </ul>
               </nav>
@@ -161,28 +168,28 @@
                 <div class="producers__item">
                   <header class="producers__item__header">
                     <h2>Челнинский кирпичный завод</h2>
-                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                    <div class="producers__item__header__goto"><a href="factory.html"></a></div>
                   </header>
                   <div class="producers__item__cover producers__item__cover--factory"></div>
                 </div>
                 <div class="producers__item">
                   <header class="producers__item__header">
                     <h2>Казанский комбинат строительных материалов</h2>
-                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                    <div class="producers__item__header__goto"><a href="factory.html"></a></div>
                   </header>
                   <div class="producers__item__cover producers__item__cover--factory"></div>
                 </div>
                 <div class="producers__item">
                   <header class="producers__item__header">
                     <h2>Кощаковский кирпичный завод</h2>
-                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                    <div class="producers__item__header__goto"><a href="factory.html"></a></div>
                   </header>
                   <div class="producers__item__cover producers__item__cover--factory"></div>
                 </div>
                 <div class="producers__item">
                   <header class="producers__item__header">
                     <h2>Казанский ДСК</h2>
-                    <div class="producers__item__header__goto"><a href="#"></a></div>
+                    <div class="producers__item__header__goto"><a href="factory.html"></a></div>
                   </header>
                   <div class="producers__item__cover producers__item__cover--kdsk"></div>
                 </div>
@@ -273,16 +280,28 @@
   </div>
 
     <div class="mfp-hide modal__dialog modal__dialog--form" id="popup_call">
-      <form class="modal__form abc-form">
+      <form class="modal__form abc-form abc-from--done">
         <header class="abc-form__header"><h2>Оставьте контакты и получите скидку</h2></header>
+<!--         <div class="abc-form__success"></div>
+        <div class="abc-form__close">
+          <button class="btn btn--green btn--submit">Закрыть</button>
+        </div> -->
         <div class="abc-form__field">
-          <input type="text" name="" placeholder="Ваше имя">
+          <input  type="text" name="" 
+                  placeholder="Ваше имя"
+                  data-validation="custom required"
+                  data-validation-regexp="^([a-zA-Zа-яА-Я\s]+)$">
         </div>
         <div class="abc-form__field">
-          <input id="form_field_phone" type="text" name="" placeholder="Ваше телефон">
+          <input  id="form_field_phone" 
+                  type="text" 
+                  name="" 
+                  placeholder="Ваше телефон"
+                  data-validation="required">
         </div>
         <div class="abc-form__field">
-          <textarea placeholder="Ваше сообщение"></textarea>
+          <textarea placeholder="Ваше сообщение"
+                    data-validation="required"></textarea>
         </div>
         <div class="abc-form__field">
           <button type="submit" class="btn btn--green btn--submit">Отправить</button>

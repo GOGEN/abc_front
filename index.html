@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="index.css">
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
   </head>
   <body>
     
@@ -26,7 +27,7 @@
         <a href="catalog.html" class="topbar__catalog__link">Каталог</a>
       </div>
       <div class="topbar__search">
-        <form name="search-form">
+        <form name="search-form" action="search.html" novalidate>
           <input name="query" type="text" placeholder="Что вы ищите?" required/>
           <button type="submit">Поиск</button>
           <button type="reset"></button>          
@@ -183,7 +184,7 @@
       </div>
     </div>
     <header class="good__title">
-      Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)
+      <a href="product.html">Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)</a>
     </header>
     <table class="good__description">
       <tr>
@@ -211,7 +212,7 @@
       </div>
     </div>
     <header class="good__title">
-      Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)
+      <a href="product.html">Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)</a>
     </header>
     <table class="good__description">
       <tr>
@@ -239,7 +240,7 @@
       </div>
     </div>
     <header class="good__title">
-      Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)
+      <a href="product.html">Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)</a>
     </header>
     <table class="good__description">
       <tr>
@@ -267,7 +268,7 @@
       </div>
     </div>
     <header class="good__title">
-      Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)
+      <a href="product.html">Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)</a>
     </header>
     <table class="good__description">
       <tr>
@@ -351,30 +352,40 @@
   <header class="geo-sale__header">
     <h2>География продаж</h2>
   </header>
-  <div class="geo-sale__map">
-    <img src="images/media/map_yandex.jpg">
+  <div id="geo_sale_map" class="geo-sale__map">
+<!--     <img src="images/media/map_yandex.jpg">
     <div class="geo-sale__map__marker">
       <div class="map-marker"></div>
-    </div>
+    </div> -->
   </div>
 </div>
         <div class="ask">
-  <form class="ask__form abc-form">
+  <form class="ask__form abc-form" method="POST">
     <header class="abc-form__header">
       <h2>Есть вопросы?</h2>
       <h3>Мы с удовольствием проконсультируем вас и<br/>предложим лучшее решение</h3>
     </header>
     <div class="abc-form__field">
-      <input type="text" placeholder="Имя и фамилие"/>
+      <input  type="text" 
+              placeholder="Имя и фамилие"
+              data-validation="required custom"
+              data-validation-regexp="^([a-zA-Zа-яА-Я\s]+)$"/>
     </div>
     <div class="abc-form__field">
-      <input type="text" placeholder="Email"/>
+      <input  type="text" 
+              placeholder="Email"
+              data-validation="email required"/>
     </div>
     <div class="abc-form__field">
-      <textarea placeholder="Введите ваше сообщение"></textarea>
+      <textarea placeholder="Введите ваше сообщение"
+                data-validation="required"></textarea>
     </div>
     <div class="abc-form__field">
       <button type="submit" class="btn btn--green btn--submit">Отправить</button>
+<!--       <div class="abc-form__field__success-btn">
+        <span class="abc-form__field__success-btn__icon"></span>
+        Готово
+      </div> -->
     </div>
   </form>
 </div>
@@ -463,16 +474,28 @@
   </div>
 
     <div class="mfp-hide modal__dialog modal__dialog--form" id="popup_call">
-      <form class="modal__form abc-form">
+      <form class="modal__form abc-form abc-from--done">
         <header class="abc-form__header"><h2>Оставьте контакты и получите скидку</h2></header>
+<!--         <div class="abc-form__success"></div>
+        <div class="abc-form__close">
+          <button class="btn btn--green btn--submit">Закрыть</button>
+        </div> -->
         <div class="abc-form__field">
-          <input type="text" name="" placeholder="Ваше имя">
+          <input  type="text" name="" 
+                  placeholder="Ваше имя"
+                  data-validation="custom required"
+                  data-validation-regexp="^([a-zA-Zа-яА-Я\s]+)$">
         </div>
         <div class="abc-form__field">
-          <input id="form_field_phone" type="text" name="" placeholder="Ваше телефон">
+          <input  id="form_field_phone" 
+                  type="text" 
+                  name="" 
+                  placeholder="Ваше телефон"
+                  data-validation="required">
         </div>
         <div class="abc-form__field">
-          <textarea placeholder="Ваше сообщение"></textarea>
+          <textarea placeholder="Ваше сообщение"
+                    data-validation="required"></textarea>
         </div>
         <div class="abc-form__field">
           <button type="submit" class="btn btn--green btn--submit">Отправить</button>
