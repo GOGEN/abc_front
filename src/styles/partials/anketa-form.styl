@@ -23,16 +23,22 @@
     +below(600px)
       text-align: center
     
-    input
+    input[type="text"]
       col(410/720, offset: 10/720, gutter: 0)
       display: inline-block
       float: none
+      padding: 0 15px
       height: 56px
       line-height: normal
+
+      &.error
+        color: $red
+        background: img-url('icons/x-red.png') no-repeat right 15px center
       
       +below(600px)
         col(1/1, gutter: 0)
         display: block
+        text-align: left
         
     label
       col(300/720, gutter: 0)

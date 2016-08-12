@@ -7,6 +7,7 @@
     "jquery.maskedinput": "^1.4.1",
     "sticky-kit": "^1.1.2",
     "magnific-popup": "^1.1.0",
-    "numeral": "^1.5.3"
+    "numeral": "^1.5.3",
+    "jquery-form-validator": "^2.3.36"
   }
 }

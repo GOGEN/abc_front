@@ -1,0 +1,28 @@
+.promotions-news-cover
+  position: relative
+  min-height: 225px
+  background-size: cover
+  background-position: right bottom
+  text-align: left
+  
+  h1
+    font-size: 34px
+    font-weight: 700
+    color: $white
+      
+  &__description
+    margin-top: 20px
+    font-size: 20px
+    line-height: 1.5rem
+    color: $white
+  
+  &__gradient
+    padding: 40px 450px 50px 130px
+    height: 100%
+    min-height: 225px
+    background: linear-gradient(bottom, $yellow, $yellow-0)
+    
+  +below(780px)
+    
+    &__gradient
+      padding: 40px

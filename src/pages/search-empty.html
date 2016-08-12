@@ -1,0 +1,30 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content">
+      <div class="page page--search">
+        <header class="page__header">
+          <form class="search-form">
+            <div class="search-form__field">
+              <input type="text" name="">
+              <button type="submit">Поиск</button>              
+            </div>
+          </form>
+        </header>
+
+        <div class="page__content">
+          <div class="search-results">
+            <div class="search-results__empty">
+              <div class="search-results__empty__request">По запросу:</div>
+              <div class="search-results__empty__query">КИРПИЧТИ</div>
+              <div class="search-results__empty__result">НИЧЕГО НЕ НАЙДЕНО</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock %}

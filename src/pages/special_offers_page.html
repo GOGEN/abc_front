@@ -1,0 +1,63 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+  <div class="slide-wrapper">
+    <div class="content">
+      <div class="page">
+        <div class="page__wrapper">
+          <header class="page__header page__header--black">
+            <h1>Лето не повод отдыхать</h1>
+            <div class="page__header__breadcrumbs">
+              <div class="breadcrumbs breadcrumbs--black">
+                <div class="breadcrumbs__item">
+                  <a href="#">Главная</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item">
+                  <a href="#">Акции</a>
+                </div>
+                <div class="breadcrumbs__item breadcrumbs__item--arrow"></div>
+                <div class="breadcrumbs__item breadcrumbs__item--active">
+                  <a href="#">Лето не повод отдыхать</a>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="page__content">
+            <div class="news">
+              <div class="news__gallery">
+                <div class="news__gallery__view">
+                  <div class="promotions-news-cover" style="background-image: url('images/media/calendar.jpg')">
+                    <div class="promotions-news-cover__gradient">
+                      <h1>Лето не повод отдыхать</h1>
+                      <div class="promotions-news-cover__description">
+                        Отдел продаж работает для вас каждый день и даже в воскресенье
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news__wrapper">
+                <div class="news__publish-date">14.03.2016</div>
+                <div class="news__text markups">
+                  <h2>Лето не повод отдыхать</h2>
+                  <p>
+                    Как подчеркнул глава министерства И.Файзуллин, удорожание строительных материалов является одной из главных причин роста инфляции в строительной отрасли. Показатель инфляции на рынке стройматериалов по итогам 2015 года составил 13,5 процента.
+                  </p>
+                  <p>
+                    В 2015 году в Татарстане инвестиции, направленные в строительство, составили 11,1 млрд. рублей, или 2,1 процента от общего объема инвестиций в основной капитал РТ.
+                  </p>
+                  <p>
+                    На рынке жилищно-коммунальных услуг республики сегодня действуют 612 крупных организаций и около 700 средних и мелких.
+                  </p>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock %}

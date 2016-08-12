@@ -5,8 +5,6 @@
   height: 100%
   background: $white
   
-  &--
-
   &__header
     padding-bottom: 40px
 
@@ -22,6 +20,18 @@
 
     h2 + h3
       margin-top: 15px
+      
+  &__success
+    margin: 0 auto
+    width: 175px
+    height: @width
+    border: 3px solid $gray-eight
+    border-radius(@width)
+    background: img-url('icons/form-success.svg') no-repeat center center
+    background-size: 95px 70px
+    
+  &__close
+    margin-top: 70px
 
   &__field
 
@@ -35,13 +45,40 @@
 
     input[type="text"]
       height: 55px
+      
+      &.error
+        color: $red
+        background: img-url('icons/x-red.png') no-repeat right 25px center
 
     textarea
       padding-top: 20px
       padding-bottom: 20px
       height: 100px
       margin-bottom: -3px
+      
+      &.error
+        color: $red
+        background: img-url('icons/x-red.png') no-repeat right 25px top 25px
+      
+    .help-block
+      display: none
+      
+    &__success-btn
+      height: 55px
+      line-height: @height
+      background: $green-four
+      text-align: center
+      color: $white
+      font-size: 20px
+      
+      &__icon
+        display: inline-block
+        width: 24px
+        height: 16px
+        background: img-url('icons/form-success-white.svg') no-repeat center center
+        background-size: contain
         
+
   +below(680px)
     padding-right: 10px
     padding-left: 10px

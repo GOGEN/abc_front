@@ -1,0 +1,65 @@
+
+.search-results
+  center(1060px, pad=30px)
+  padding-bottom: 70px
+  
+  &__empty
+    margin: 70px 0
+    text-align: center
+    
+    &__request
+      color: $gray-seven
+    
+    &__query
+      margin-top: 20px
+      font-size: 28px
+      
+    &__result
+      margin-top: 40px
+            
+  &__count
+    height: 80px
+    line-height: @height
+    color: $gray-seven
+    
+  &__item
+    margin-bottom: 25px
+    height: 90px
+    
+    &__cover
+      position: relative
+      float: left
+      margin-right: 20px
+      width: 160px
+      height: 100%
+
+      img
+        align()
+        max-width: 100%
+        max-height: 100%
+    
+    &__title
+      font-weight: 700
+      text-overflow: ellipsis
+      overflow: hidden
+      line-height: 18px
+      white-space: nowrap      
+            
+    &__title + &__description
+      margin-top: 20px
+      
+    &__description
+      display: block
+      display: -webkit-box
+      font-size: 16px
+      line-height: 18px
+      word-wrap: break-word
+      height: 54px
+      overflow: hidden
+      text-overflow: ellipsis
+      -webkit-line-clamp: 3
+      box-orient: vertical
+
+  &__show-more
+    margin-top: 55px
+    text-align: center

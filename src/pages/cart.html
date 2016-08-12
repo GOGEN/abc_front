@@ -70,13 +70,22 @@
               </div>
               <div class="cart__person">
                 <div class="cart__person__field">
-                  <input type="text" name="" placeholder="Ваше имя">
+                  <input  type="text" 
+                          name="" 
+                          placeholder="Ваше имя"
+                          data-validation="custom required"
+                          data-validation-regexp="^([a-zA-Zа-яА-Я\s]+)$">
                 </div>
                 <div class="cart__person__field">
-                  <input type="text" name="" id="form_field_phone" placeholder="Ваш телефон">
+                  <input  type="text" name="" 
+                          id="form_field_phone" 
+                          placeholder="Ваш телефон"
+                          data-validation="required">
                 </div>
                 <div class="cart__person__field">
-                  <input type="text" name="" placeholder="Ваш E-mail">
+                  <input  type="text" name="" 
+                          placeholder="Ваш E-mail"
+                          data-validation="email required">
                 </div>
               </div>
               <div class="cart__total">

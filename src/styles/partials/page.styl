@@ -1,8 +1,29 @@
 
 .page
+  position: relative
   padding-top: 150px
   background: $gray
   
+  &--search
+    padding-top: 65px
+  
+  &--search &__header
+    padding: 45px 0
+  
+  &--jobs-bg,
+  &--news-bg,
+  &--team-bg,
+  &--contacts-bg,
+  &--dealers-bg
+    padding-top: 200px
+    
+  &--contacts-bg
+    padding-bottom: 270px
+  
+  &--cart-bg
+    background: $gray img-url("icons/pattern.svg")
+    background-size: cover
+
   &--anketa
     +below(980px)
       padding-top: 50px
@@ -11,36 +32,47 @@
     +below(980px)
       margin-top: 50px
       background: $white
-      
-  &--dealers-bg
-    padding-top: 200px
-    background: img-url("media/map_yandex_2.jpg") no-repeat center top
-    background-size: contain
-    
-    +below(980px)
-      background-size: auto 415px
-
-  
-  &--contacts-bg
-    position: relative
-    padding-top: 200px
-    padding-bottom: 270px
-    background: img-url("media/LYB_SFL1.jpg") no-repeat center top
-    background-size: contain
-    
-    +below(980px)
-      background-size: auto 415px
-
-    
+          
   &--contacts-bg &__wrapper
     position: relative
-    z-index: 1
+    z-index: 2
     
   &--contacts-bg &__content
     padding-bottom: 0
+            
+  &__bg
+    position: absolute
+    top: 0
+    width: 100%
+    height: 415px
+    background-size: cover
+    background-repeat: no-repeat 
+    background-position: center top
+    
+    &__dark
+      width: 100%
+      height: 100%
+      background: $dark-30
 
-  &--about-bg
-    padding-top: 200px
+    +below(980px)
+      background-size: auto 415px
+      
+  &--dealers-bg &__bg
+    background-image: img-url("media/map_yandex_2.jpg")
+  
+  &--contacts-bg &__bg
+    background-image: img-url("media/LYB_SFL1.jpg")
+    
+  &--jobs-bg &__bg
+    background-image: img-url("media/job.jpg")
+
+  &--news-bg &__bg
+    background-image: img-url("media/news_bg.jpg")
+      
+  &--team-bg &__bg
+    background-image: img-url("media/team_bg.jpg")
+
+  &--about-bg &__bg
     width: 100%
     background: img-url("media/about_cover_1.jpg") no-repeat left top,
                 img-url("media/about_cover_2.jpg") no-repeat center top,
@@ -48,8 +80,7 @@
     background-size: 33.4% auto
 
     +below(980px)
-      position: relative
-      padding-top: 200px
+      position: absolute
       background: img-url("media/about_cover_1.jpg") no-repeat left top
       background-size: auto 415px
       z-index: 2
@@ -76,37 +107,12 @@
         width: 33.4%
         height: 100%
         background: img-url("media/about_cover_3.jpg") no-repeat center top
-        z-index: -1        
-      
-  &--jobs-bg
-    padding-top: 200px
-    background: img-url("media/job.jpg") no-repeat center top
-    background-size: contain
-    
-    +below(980px)
-      background-size: auto 415px
-      
-  &--news-bg
-    padding-top: 200px
-    background: img-url("media/news_bg.jpg") no-repeat center top
-    background-size: contain
-    
-    +below(980px)
-      background-size: auto 415px
-      
-  &--cart-bg
-    background: $gray img-url("media/cart_bg.png")
-    
-  &--team-bg
-    padding-top: 200px
-    background: img-url("media/team_bg.jpg") no-repeat center top
-    background-size: contain
-    
-    +below(980px)
-      background-size: auto 415px
+        z-index: -1    
     
   &__wrapper
     center(1140px)
+    position: relative
+    z-index: 3
     
 
   &__header
@@ -153,13 +159,13 @@
       
       img
         width: 100%             
-    
-  +below(1260px)
-  
-    &__nav
-      display: none
-      
+          
   +below(980px)
+  
+    padding-top: 180px
+    
+    &--search
+      padding-top: 65px
   
     &__content
       margin-top: 140px
@@ -179,6 +185,9 @@
         margin-bottom: 10px
         
   +below(400px)
+    
+    &__nav
+      display: none
     
     &__gallery__item
       span(1/1)

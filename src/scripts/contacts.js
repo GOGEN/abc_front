@@ -1,6 +1,22 @@
 
 (function () {
   'use strict';
+
+  var map = new YMaps.Map(YMaps.jQuery('#contacts_map')[0]);
+  var s = new YMaps.Style();
+  s.iconStyle = new YMaps.IconStyle();
+  s.iconStyle.href = 'images/icons/placeholder-blue.svg';
+  s.iconStyle.size = new YMaps.Point(25, 40);
+  s.iconStyle.offset = new YMaps.Point(-12.5, -40);
+
+  function initMap(coord) {
+    map.removeAllOverlays();
+    map.setCenter(new YMaps.GeoPoint(coord.lat, coord.long), 8);
+
+    var placemark = new YMaps.Placemark(new YMaps.GeoPoint(coord.lat, coord.long), {style: s});
+    map.addOverlay(placemark);
+  }
+
   var tabMenuItems = $('#contact_tab_menu').children();
   var tabContentItems = $('#contact_tab_content').children();
   for(var i = 0; i < tabMenuItems.length; i++) {
@@ -17,6 +33,14 @@
           $('#contact_tab_active_item').text($(tabMenuItems[j]).text());
           $('#contact_tab_active_arrow').removeClass('contacts__tabs__active__arrow--active');
           $('#contact_tab_menu').removeClass('contacts__tabs__menu--show');
+
+          var coordElem = $(tabMenuItems[j]).find('input[type="hidden"]');
+          if (coordElem[0] === undefined) {
+            map.removeAllOverlays();
+            return;
+          }
+          var coord = $(coordElem)[0].value.split(',');
+          initMap({lat: coord[0], long: coord[1]});
         }
       }
 
