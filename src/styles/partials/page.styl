@@ -2,7 +2,7 @@
 .page
   position: relative
   padding-top: 150px
-  background: $gray
+  background-color: $white
   
   &--search
     padding-top: 65px
@@ -56,6 +56,12 @@
 
     +below(980px)
       background-size: auto 415px
+      
+  &--anketa &__bg
+    height: 325px
+      
+  &--gray-bg &__bg
+    background-color: $gray
       
   &--dealers-bg &__bg
     background-image: img-url("media/map_yandex_2.jpg")
