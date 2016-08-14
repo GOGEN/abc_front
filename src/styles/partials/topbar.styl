@@ -1,8 +1,12 @@
 
 .topbar
   padding: 15px 60px
-  height: 65px
+  height: 100%
+  max-height: 65px
   background-color: $white
+  overflow-y: hidden
+  opacity: 1
+  transition: all .2s linear
   clearfix()
 
   &__catalog
@@ -44,7 +48,7 @@
       border: 0
       outline: 0
       cursor: pointer
-      transition: opacity .3 linear
+      transition: opacity .3s linear
       opacity: 0
       z-index: -1
       
@@ -101,21 +105,22 @@
     &__catalog
       margin-left: 5%
       
-    &__call
-      margin-left: 10%
-
   +below(980px)
     display: flex
     flex-wrap: wrap
     padding: 0
     height: auto
+    max-height: none
     background-color: $white
     text-align: center
     
+    &__call
+      margin-right: 0
+      padding: 8px 0
+
     &__catalog,
     &__search,
-    &__cart,
-    &__call
+    &__cart
       float: none
       margin-left: 0
       height: 50px
@@ -143,16 +148,27 @@
       height: 48px
       line-height: @height
       font-size: 18px
+      background-color: $white
       
     &__search
       order: 2
 
       input
+        position: relative
         width: 100%
-
-        &:focus
-          background-image: img-url("icons/search.svg")
+        height: 50px
+        background-position: right 20px center
+        font-size: 16px
+        
+        &:focus,
+        &:valid
           width: 100%
+          
+      button[type="submit"],
+      button[type="reset"]
+        top: 50%
+        transform: translateY(-50%)
+        transition: none
 
     &__cart
       display: block

@@ -45,36 +45,29 @@
     &--solid
       background-color: $white
       
-  &--sticky
-    height: 65px
-    background: $white
-    
-  &--sticky &__logo
-    padding-top: 10px
-    padding-right: 65px
-    padding-bottom: 10px
-    width: 230px
-    height: 100%
-    
-  & .topbar
-    height: 100%
-    max-height: 65px
-    overflow-y: hidden
-    opacity: 1
-    transition: all .2s linear
-    
-  &--sticky &__menu
-    
-    & .topbar
-      padding-top: 0
-      padding-bottom: 0
-      max-height: 0
-      opacity: 0
-      
-    
   &__checkbox
     display: none
     
+  +allow(980px)
+    &--sticky
+      height: 65px
+      background: $white
+      
+    &--sticky &__logo
+      padding-top: 10px
+      padding-right: 65px
+      padding-bottom: 10px
+      width: 230px
+      height: 100%
+      
+    &--sticky &__menu
+      
+      & .topbar
+        padding-top: 0
+        padding-bottom: 0
+        max-height: 0
+        opacity: 0
+
   +below(1260px)
     
     &__menu
@@ -82,7 +75,7 @@
 
   +below(980px)
     position: static
-    height: 100%
+    height: 85px
     z-index: 0
     
     &__cart
@@ -93,12 +86,11 @@
       z-index: 10
     
     &__menu
-      position: absolute
+      top: 85px
       margin-left: 0
       width: 100%
       overflow-x: hidden
       background-color: $white
-      transition: width .2s ease-in-out
     
     &__logo
       position: static

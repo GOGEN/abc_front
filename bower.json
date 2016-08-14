@@ -8,6 +8,7 @@
     "sticky-kit": "^1.1.2",
     "magnific-popup": "^1.1.0",
     "numeral": "^1.5.3",
-    "jquery-form-validator": "^2.3.36"
+    "jquery-form-validator": "^2.3.36",
+    "slideout.js": "^0.1.12"
   }
 }
