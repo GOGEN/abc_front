@@ -11,10 +11,6 @@
         'tolerance': 70
       });
 
-  // Toggle button
-  // document.querySelector('.toggle-button').addEventListener('click', function() {
-  //   slideout.toggle();
-  // });
   $('.navigation-checkbox-label').click(function () {
     slideout.toggle();
   });
