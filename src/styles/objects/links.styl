@@ -27,6 +27,10 @@
   &:hover
     background-color: $gray
     
+  +below(980px)
+    font-size: 14px
+    padding: 0 20px
+    
 .link-share
   padding-right: 25px
   background: img-url("icons/link.svg") no-repeat right center
@@ -73,11 +77,9 @@
     
 .link-dealers
   display: inline-block
-  padding-right: 73px
-  padding-left: 25px
-  height: 50px
+  padding: 18px 73px 18px 25px
+  min-height: 50px
   border-radius(3px)
-  line-height: @height
   background: $blue img-url("icons/arrow-right-white.svg") no-repeat center right 25px
   color: $white
   

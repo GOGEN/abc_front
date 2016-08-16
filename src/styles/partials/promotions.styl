@@ -8,7 +8,7 @@
   &__item
     span(1/2)
     position: relative
-    padding: 35px 0 15px 35px
+    padding: 35px 35px 15px
     height: 170px
 
     &__info
@@ -50,5 +50,14 @@
         
       &__description
         font-size: 18px
+        
+  +below(450px)
+    
+    &__item
+      padding-left: 15px
+      padding-right: 15px
+      
+      &__cover
+        background-position: right 60% center
 
 

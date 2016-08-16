@@ -3,21 +3,23 @@
   center(1060px, pad=30px)
   
   &__field
-    clearfix()
+    position: relative
     border-bottom: 1px solid $gray-six
     padding-top: 10px
     padding-bottom: 10px
     
     input[type="text"]
-      float: left
-      max-width: 900px
+      padding-right: 80px
       width: 100%
       font-size: 28px
       border: 0
       background: transparent
       
     button[type="submit"]
-      float: right
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
       margin: 0
       padding: 0 15px
       height: 27px

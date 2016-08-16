@@ -57,11 +57,11 @@
   +below(980px)
     padding: 0
     background: $white
-    box-shadow: 0 4px 6px 0 $dark-gray
 
     &__item
       display: block
       float: none
+      padding: 0
       height: 40px
       line-height: @height
       border: 0
@@ -70,9 +70,21 @@
         border: 0
       
       label
-        padding-right: 10px
+        padding-right: 0
         padding-left: 40px
+        height: 40px
+        line-height: 40px
         font-size: 16px
         
         &::after
-          left: 15px
+          left: 10px
+          
+  +below(400px)
+  
+    &__item
+      
+      label
+        padding-left: 30px
+        
+        &::after
+          left: 0

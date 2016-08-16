@@ -3,6 +3,8 @@
   'use strict';
   var gallery = $('#news_gallery');
 
+  var slidesCount = $(window).width() > 480 ? 4 : 3;
+
   gallery.find('#news_gallery_view').slick({
     slideToShow: 1,
     slideToScroll: 1,
@@ -12,8 +14,8 @@
   });
 
   gallery.find('#news_gallery_list').slick({
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: slidesCount,
+    slidesToScroll: slidesCount,
     arrows: false,
     asNavFor: '#news_gallery_view',
     focusOnSelect: true

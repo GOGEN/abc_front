@@ -67,6 +67,9 @@
       height: @width
       border-radius(@width)
       background: $dark-gray img-url("icons/close.svg") no-repeat center center
+      
+      &:hover
+        background-color: $gray-eight
 
     input
       position: absolute
@@ -114,26 +117,27 @@
     background-color: $white
     text-align: center
     
+    &__cart
+      display: none
+    
     &__call
       margin-right: 0
       padding: 8px 0
 
     &__catalog,
-    &__search,
-    &__cart
+    &__search
       float: none
       margin-left: 0
       height: 50px
       line-height: 50px
 
-    &__catalog,
-    &__cart
+    &__catalog
       order: 1
-      width: 50%
       border: 1px solid $gray
     
     &__search,
-    &__call
+    &__call,
+    &__catalog
       width: 100%
       
     &__call 
@@ -141,14 +145,18 @@
       border-bottom: 0
       
       span
-        padding-left: 20px
+        padding: 0 20px
         
     &__catalog__link
-      display: block
+      display: inline-block
       height: 48px
       line-height: @height
       font-size: 18px
       background-color: $white
+      
+      &:active,
+      &:hover
+        background-color: $white
       
     &__search
       order: 2
@@ -170,35 +178,3 @@
         transform: translateY(-50%)
         transition: none
 
-    &__cart
-      display: block
-      position: relative
-      text-align: center
-      
-
-      &>a
-        display: block
-        font-size: 16px
-        font-weight: 300
-        color: $dark-gray
-        
-      &__icon
-        position: relative
-        top: 4px
-        display: inline-block
-        width: 20px
-        height: 20px
-        background: img-url("icons/cart.svg") no-repeat center center
-        
-      &__notify
-        position: absolute
-        top: -5px
-        left: -5px
-        width: 17px
-        height: @width
-        border-radius(@width)
-        background-color: $green
-        color: $white
-        font-size: 11px
-        line-height: @height
-        text-align: center

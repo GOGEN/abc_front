@@ -9,6 +9,7 @@
     display: inline-block
     margin-bottom: 40px
     padding: 20px
+    width: 100%
     background: $gray
     
     &__publish-date
@@ -17,7 +18,7 @@
     &__title
       margin-top: 25px
       font-size: 24px
-      word-break: break-all
+      word-wrap: break-word
       
       a:hover
         color: $black-two
@@ -34,5 +35,5 @@
     column-count: 2
     
   +below(480px) 
-    margin: 0 40px
+    margin: 0
     column-count: 1     

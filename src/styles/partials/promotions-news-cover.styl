@@ -3,6 +3,8 @@
   min-height: 225px
   background-size: cover
   background-position: right bottom
+  background-repeat: no-repeat
+  background-color: $yellow-two
   text-align: left
   
   h1
@@ -26,3 +28,29 @@
     
     &__gradient
       padding: 40px
+      
+  +below(450px)
+    background-position: right bottom -30px
+    background-size: 250%
+    
+    h1
+      font-size: 28px
+      
+    &__gradient
+      padding: 15px
+      min-height: 280px
+
+    &__description
+      font-size: 16px
+      line-height: 1.2rem
+      
+  +below(400px)
+
+    h1
+      font-size: 20px
+
+    &__description
+      font-size: 14px
+      
+    &__gradient
+      min-height: 240px

@@ -31,16 +31,16 @@
           <div class="page__content">
             <div class="page__gallery">
               <div class="page__gallery__item">
-                <img src="images/media/gallery_photo.jpg">
+                <a href="#popup_photo_view_1"><img src="images/media/gallery_photo.jpg"></a>
               </div>
               <div class="page__gallery__item">
-                <img src="images/media/gallery_photo.jpg">
+                <a href="#popup_photo_view_1"><img src="images/media/gallery_photo.jpg"></a>
               </div>
               <div class="page__gallery__item">
-                <img src="images/media/gallery_photo.jpg">
+                <a href="#popup_photo_view_1"><img src="images/media/gallery_photo.jpg"></a>
               </div>
               <div class="page__gallery__item">
-                <img src="images/media/gallery_photo.jpg">
+                <a href="#popup_photo_view_1"><img src="images/media/gallery_photo.jpg"></a>
               </div>
             </div>
             <div class="about-wrapper markups">
@@ -88,5 +88,10 @@
       </div>
     </div>
     {% include "partials/footer.html" %}
+  </div>
+  <div class="modal__dialog mfp-hide" id="popup_photo_view_1">
+    <div class="modal__photo">
+      <img src="images/media/popup_photo.jpg">      
+    </div>
   </div>
 {% endblock %}

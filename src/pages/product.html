@@ -4,15 +4,15 @@
   {% include "partials/header.html" %}
   <div class="slide-wrapper">    
     <div class="content">
-      <div class="page page--not-bg">
+      <div class="page page--product">
         <div class="fluid-wrapper">
-          <header class="page__header page__header--black page__header--good-page">
-            <h1>Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)</h1>
-            <div class="page__header__back">
-              <a href="catalog.html">Обратно к каталогу</a>
-            </div>
-          </header>
           <div class="good-page">
+            <header class="good-page__header">
+              <h1>Кирпич керамический одинарный пустотелый (1НФ) / полуторный (1,4 НФ)</h1>
+              <div class="good-page__header__back">
+                <a href="catalog.html">Обратно к каталогу</a>
+              </div>
+            </header>
             <div class="good-page__col">
               <div class="good-page__cover" style="background-image: url('images/media/kirpichi_bg.jpg')">
                 <img src="images/media/kirpichi_pr.jpg">
@@ -100,22 +100,22 @@
                 <button id="product_slick_slider_prev" class="slider__arrow slider__arrow--left"></button>
                 <div class="slider__list" id="product_slick_slider_content">
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                 </div>
                 <button id="product_slick_slider_next" class="slider__arrow slider__arrow--right"></button>
@@ -127,22 +127,22 @@
                 <button id="product_slick_slider_prev" class="slider__arrow slider__arrow--left"></button>
                 <div class="slider__list" id="product_slick_slider_content">
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                   <div class="slider__item">
-                    <img src="images/media/brick_wall.jpg">
+                    <a href="#popup_photo_view_1"><img src="images/media/brick_wall.jpg"></a>
                   </div>
                 </div>
                 <button id="product_slick_slider_next" class="slider__arrow slider__arrow--right"></button>
@@ -152,6 +152,11 @@
         </div>
       </div>
     </div>
+    {% include "partials/footer.html" %}
   </div>
-  {% include "partials/footer.html" %}
+  <div class="modal__dialog mfp-hide" id="popup_photo_view_1">
+    <div class="modal__photo">
+      <img src="images/media/popup_photo.jpg">      
+    </div>
+  </div>
 {% endblock %}

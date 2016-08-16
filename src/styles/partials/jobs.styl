@@ -15,10 +15,12 @@
     
     h2
       font-size: 24px
+      line-height: 2rem
       
     p
       font-size: 16px
       margin-bottom: 25px
+      line-height: 1.3rem
       
     h2 + p
       margin-top: 15px
@@ -28,7 +30,7 @@
     padding: 50px 35px
     padding-left: 125px
     max-width: 430px
-    height: 295px
+    min-height: 295px
     box-shadow: 0 10px 40px 5px $gray-two
     background: $gray img-url("icons/info.svg") no-repeat left 35px top 50px
     
@@ -82,6 +84,7 @@
         width: 44px
         height: @width
         background: img-url("icons/circle-arrow-top.svg") no-repeat center center
+        background-size: contain
         transform: rotate(90deg)
         transition: transform .2s ease-out
         cursor: pointer
@@ -94,10 +97,46 @@
         overflow-y: auto
               
       input[type="checkbox"]:checked + label + &__title + &__description
-        max-height: 500px
+        max-height: 1000px
         
   +below(800px)
     
     &__header__col
-      span(1/1)        
+      span(1/1)
       
+  +below(400px)
+      
+    &__contacts
+      padding: 105px 35px 35px
+      
+    &__vacancies
+      
+      &__list
+        padding-left: 0
+      
+      &__item
+        padding-left: 45px
+        padding-right: 10px
+        
+        label
+          left: 10px
+          width: 25px
+          height: 25px
+          
+        &__title
+          margin-left: 0
+          height: 25px
+          line-height: @height
+          font-size: 16px
+          
+        &__description
+          margin-left: 0
+          
+    &__vacancies__item &__markups
+      
+      h2
+        font-size: 18px
+        font-weight: 500
+
+      h2 + p
+        margin-top: 10px

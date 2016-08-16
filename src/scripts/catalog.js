@@ -23,6 +23,10 @@
 (function () {
   'use strict';
 
+  if($(window).width() < 980) {
+    return;
+  }
+
   $('#catalog_fixed_sidebar').stick_in_parent({offset_top: 40});
 
 })();

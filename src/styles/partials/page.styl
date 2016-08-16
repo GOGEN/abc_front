@@ -9,6 +9,11 @@
   
   &--search &__header
     padding: 45px 0
+    background: $gray
+    
+  &--product
+    padding-top: 65px
+    background: $gray
   
   &--jobs-bg,
   &--news-bg,
@@ -22,7 +27,7 @@
   
   &--cart-bg
     background: $gray img-url("icons/pattern.svg")
-    background-size: cover
+    background-size: 105px auto
           
   &--contacts-bg &__wrapper
     position: relative
@@ -120,17 +125,6 @@
       font-size: 34px
       line-height: 50px
       color: $white
-      
-    &__back
-      margin-top: 25px
-      
-      a
-        display: inline-block
-        padding: 10px
-        padding-left: 40px
-        font-size: 16px
-        background: $white img-url("icons/arrow-left-green.svg") no-repeat left 10px center
-
 
     &--black h1
       color: $black
@@ -138,8 +132,7 @@
     &--centered
       text-align: center
     
-    &--cart,
-    &--good-page
+    &--cart
       padding: 20px 0
 
   &__content
@@ -160,6 +153,26 @@
   +below(980px)
   
     padding-top: 180px
+
+    &--cart-bg,
+    &--product
+      padding-top: 0
+      
+    &--gray-bg
+      padding-top: 10px
+      
+    &--gray-bg &__bg
+      display: none
+      
+    &--cart-bg &__header
+      padding: 85px 0
+      
+    &--gray-bg &__header
+      padding: 85px 0
+      background: $gray
+      
+    &--gray-bg &__content
+      margin-top: 0
     
     &--anketa
       padding-top: 50px
@@ -169,7 +182,10 @@
       background: $white
 
     &--search
-      padding-top: 65px
+      padding-top: 25px
+      
+    &--search &__content
+      margin-top: 0
   
     &__content
       margin-top: 140px
@@ -193,6 +209,24 @@
       display: none
 
   +below(400px)
+    padding-top: 90px
+    
+    &--gray-bg
+      padding-top: 10px
+    
+    &--product,
+    &--cart-bg
+      padding-top: 0
+    
+    &--search
+      padding-top: 25px
+      
+    &--anketa &__bg
+      height: 415px
+    
+    &__header
+      padding-right: 15px
+      padding-left: 15px
     
     &__gallery__item
       span(1/1)

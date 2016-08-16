@@ -30,6 +30,7 @@
       margin-bottom: 10px
 
   +below(980px)
+    margin-top: 0
     padding-top: 25px
   
     & input[type="radio"].catalog-page__filter-dd
@@ -39,7 +40,8 @@
         opacity: 1
         z-index: 0
         col(470/960, offset: 0, gutter: 1%)
-        padding: 0 15px
+        padding-right: 20px
+        padding-left: 10px
         height: 50px
         line-height: @height
         background: $white img-url('icons/arrow-bottom.png') no-repeat right 5px center
@@ -73,12 +75,17 @@
       float: none
       position: absolute
       top: 58px
-      right: 0
-      left: 0
-      padding: 0 10px
+      right: 10px
+      left: 10px
+      padding: 10px 0
       width: auto
       z-index: 1
-      
+      box-shadow: 0 4px 6px 0 $dark-gray
+      background: $white
+
+    &__topbar
+      margin-left: 0
+
     &__showcase
       span(1/1)
       
@@ -86,5 +93,10 @@
   
     &__showcase__item
       span(1/1)
+      
+  +below(400px)
+    
+    & input[type="radio"] + label
+      font-size: 14px
     
       

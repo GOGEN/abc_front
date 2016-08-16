@@ -1,12 +1,23 @@
 
 .job-request
+  position: relative
   padding: 15px 0
-  background: img-url("media/job_request_bg.jpg") no-repeat
-  background-size: cover
+  background: linear-gradient(left, $green-six, $green-four)
   
+  &::before
+    display: block
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-image: img-url("icons/pattern-white.svg")
+    background-size: 105px auto
+
   &__form
     margin: 0 auto
-    padding: 30px 0
+    padding: 30px 45px
     max-width: 606px
     background: $white
     
@@ -16,9 +27,10 @@
       margin-bottom: 40px
       padding-top: 12px
       padding-left: 90px
-      width: 275px
+      max-width: 275px
       height: 60px
       background: img-url("icons/bag.svg") no-repeat left center
+      background-size: 65px auto
       font-size: 24px
       
     &__field
@@ -27,9 +39,10 @@
       
     input[type="text"]
       padding: 0 10px
-      width: 310px
+      width: 100%
+      max-width: 310px
       height: 40px
-      border: 1px solid $gray-two
+      border: 1px solid $gray-three
       
     input[type="file"]
       position: absolute
@@ -45,3 +58,19 @@
         font-size: 16px
         color: $gray-two
         cursor: pointer
+        
+  +below(450px)
+    padding: 0
+    background: $gray
+    border-top: 1px solid $gray-three
+    
+    &__form
+      center(340px, pad=15px)
+      background: $gray
+      
+      &__header
+        center(280px)
+        padding-left: 95px
+         
+        h2
+          font-size: 22px

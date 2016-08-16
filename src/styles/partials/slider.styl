@@ -7,13 +7,15 @@
   
   &__item
     position: relative
-    margin-right: 1%
+    margin-right: 5px
     width: 24%
     height: 165px
     overflow: hidden
     
     img
       align()
+      min-width: 100%
+      min-height: 100%
       
   &__content
     position: relative
@@ -49,3 +51,15 @@
       &.slick-disabled
         background-image: img-url("icons/arrow-right-white.svg")
         transform: rotate(0)
+        
+  +below(980px)
+  
+    &__header h1
+      font-size: 22px
+  
+    &__arrow
+      display: none
+      
+    &__content
+      margin: 40px 0
+      padding: 0

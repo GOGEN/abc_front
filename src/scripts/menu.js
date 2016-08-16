@@ -11,8 +11,18 @@
         'tolerance': 70
       });
 
-  $('.navigation-checkbox-label').click(function () {
+  var toggleButton = $('.navigation-checkbox-label');
+
+  toggleButton.click(function () {
     slideout.toggle();
+  });
+
+  slideout.on('open', function() {
+    toggleButton.addClass('navigation-checkbox-label--open');
+  });
+
+  slideout.on('close', function() {
+    toggleButton.removeClass('navigation-checkbox-label--open');
   });
 
 })();

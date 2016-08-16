@@ -4,21 +4,17 @@
   +below(980px)
     display: block
     position: fixed
-    top: 30px
-    left: 15px
-    width: 25px
-    height: 25px
+    top: 15px
+    left: 0px
+    width: 55px
+    height: 55px
     z-index: 10
     cursor: pointer
     background: img-url("icons/burger.png") no-repeat center center
+    background-size: 25px auto
                 
-.navigation-checkbox-input
-  position: absolute
-  opacity: 0
-    
-.navigation-checkbox-input:checked ~ .navigation-checkbox-label
 
-  +below(980px)
-    background: img-url("icons/rectangle-1.svg") no-repeat center center,
-                img-url("icons/rectangle-2.svg") no-repeat center center
+    &--open
+      background: img-url("icons/rectangle-1.svg") no-repeat center center,
+                  img-url("icons/rectangle-2.svg") no-repeat center center
 

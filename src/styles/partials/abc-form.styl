@@ -80,5 +80,25 @@
         
 
   +below(680px)
-    padding-right: 10px
-    padding-left: 10px
+    padding-right: 0
+    padding-left: 0
+    
+    &--popup &__header h2
+      font-size: 28px
+      
+    &--popup &__field
+      
+      input[type="text"]
+        padding: 0 15px
+        
+        &.error
+          background-position: right 15px center
+          
+      textarea
+        padding-right: 15px
+        padding-left: 15px
+        height: 135px
+        
+        &.error
+          background-position: right 15px top 25px
+          

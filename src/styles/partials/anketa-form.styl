@@ -20,9 +20,6 @@
     line-height: @height
     clearfix()
     
-    +below(600px)
-      text-align: center
-    
     input[type="text"]
       col(410/720, offset: 10/720, gutter: 0)
       display: inline-block
@@ -34,11 +31,6 @@
       &.error
         color: $red
         background: img-url('icons/x-red.png') no-repeat right 15px center
-      
-      +below(600px)
-        col(1/1, gutter: 0)
-        display: block
-        text-align: left
         
     label
       col(300/720, gutter: 0)
@@ -46,12 +38,6 @@
       float: none
       line-height: normal
       vertical-align: middle
-      
-      +below(600px)
-        col(1/1, gutter: 0)
-        display: block
-        padding: 10px 0
-        text-align: left
         
     &--submit
       margin-top: 70px
@@ -64,3 +50,24 @@
     margin-top: 17px
     font-size: 18px
     color: $gray-two
+    
+  +below(600px)
+  
+    &__field
+      height: auto
+      text-align: center
+
+      input[type="text"],
+      label
+        span(1/1)
+        text-align: left
+        
+      label
+        padding: 10px 0
+        
+      &--submit
+        margin-top: 30px
+        
+    &__helper
+      font-size: 16px
+      line-height: 1.5rem

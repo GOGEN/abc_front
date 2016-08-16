@@ -32,7 +32,14 @@
     
     &__dialog
       padding: 40px 15px 15px
+      width: 95%
+      height: 50%
+      max-height: 310px
       
+      &--form
+        min-height: 475px
+        max-height: initial
+        height: auto
 
 .mfp-bg.popup-call-override
   background: $dark-70
@@ -60,3 +67,5 @@ button.mfp-close
     top: 10px
     right: 10px
     
+    &:active
+      top: 10px    

@@ -8,19 +8,21 @@
     span(1/4)
     height: 285px
     padding-top: 140px
+    background-repeat: no-repeat
+    background-position: center bottom 170px
 
     &--bricks
-      background: img-url("icons/bricks.svg") no-repeat center bottom 170px
+      background-image: img-url("icons/bricks.svg")
 
     &--factories
-      background: img-url("icons/factory.svg") no-repeat center bottom 170px
+      background-image: img-url("icons/factory.svg")
 
     &--clients
-      background: img-url("icons/icon-clients.svg") no-repeat center bottom 170px
+      background-image: img-url("icons/icon-clients.svg")
       background-size: 80px auto
 
     &--houses
-      background: img-url("icons/house.svg") no-repeat center bottom 170px
+      background-image: img-url("icons/house.svg")
 
     &__title,
     &__sub
@@ -41,7 +43,9 @@
     &__item
       span(1/2)
 
-  +below(400px)
+  +below(450px)
     
     &__item
       span(1/1)
+      height: 225px
+      background-position: center bottom 110px

@@ -5,8 +5,11 @@
   
   &__item
     position: relative
+    background-color: $yellow-two
+    background-repeat: no-repeat
     background-size: cover
     background-position: right bottom
+    cursor: pointer
     
     h1
       font-size: 34px
@@ -38,5 +41,38 @@
     &__item
       
       &__gradient
-        padding: 10px
+        padding: 15px
         padding-right: 100px
+                
+  +below(450px)
+    
+    &__item
+      background-position: right bottom -30px
+      background-size: 250%
+      
+      h1
+        font-size: 26px
+        
+      &__gradient
+        padding-right: 15px
+        min-height: 280px
+        
+      &__goto
+        display: none
+        
+      &__description
+        font-size: 16px
+        line-height: 1.2rem
+        
+  +below(400px)
+    
+    &__item 
+      
+      h1
+        font-size: 20px
+
+      &__description
+        font-size: 14px
+        
+      &__gradient
+        min-height: 240px

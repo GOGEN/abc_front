@@ -33,7 +33,7 @@
       clearfix()
       
     &__col
-      col(235/1000, 20/1000, offset: 0)
+      col(235/1000, 4, offset: 0, gutter: 2%)
       
       &--name
         font-size: 22px
@@ -45,7 +45,7 @@
     clearfix()
     
   &__item
-    col(235/1000, 20/1000, offset: 0)
+    col(235/1000, 4, offset: 0, gutter: 2%)
     display: block
     position: relative
     margin-top: 20px
@@ -108,7 +108,7 @@
       margin-left: 15px
     
     &__item
-      col(97/300, 1/300, offset: 0)
+      col(96/300, uncycle: 4, cycle: 3, offset: 0, gutter: 2%)
       
     &__list
       margin-top: 25px
@@ -123,13 +123,15 @@
         margin-bottom: 30px
       
       &__col
-        col(175/370, 10/370, offset: 0)
+        col(175/370, cycle: 2, uncycle: 4, offset: 0)
         margin-top: 40px
         height: 45px
       
   +below(400px)
 
     &__phones
+      padding-right: 40px
+      padding-left: 40px
       
       h2
         text-align: center
@@ -140,6 +142,9 @@
         text-align: center
       
     &__item
-      col(175/370, 10/370, offset: 0)
+      col(185/370, uncycle: 3, cycle: 2, offset: 0)
       margin-top: 10px
+      height: 85px
       
+    &__action
+      font-size: 14px
