@@ -78,6 +78,10 @@
 (function () {
   'use strict';
 
+  if($(window).width() < 980) {
+    return;
+  }
+
   $('#catalog_fixed_sidebar').stick_in_parent({offset_top: 40});
 
 })();
@@ -222,8 +226,18 @@
         'tolerance': 70
       });
 
-  $('.navigation-checkbox-label').click(function () {
+  var toggleButton = $('.navigation-checkbox-label');
+
+  toggleButton.click(function () {
     slideout.toggle();
+  });
+
+  slideout.on('open', function() {
+    toggleButton.addClass('navigation-checkbox-label--open');
+  });
+
+  slideout.on('close', function() {
+    toggleButton.removeClass('navigation-checkbox-label--open');
   });
 
 })();
@@ -234,6 +248,8 @@
   'use strict';
   var gallery = $('#news_gallery');
 
+  var slidesCount = $(window).width() > 480 ? 4 : 3;
+
   gallery.find('#news_gallery_view').slick({
     slideToShow: 1,
     slideToScroll: 1,
@@ -243,8 +259,8 @@
   });
 
   gallery.find('#news_gallery_list').slick({
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: slidesCount,
+    slidesToScroll: slidesCount,
     arrows: false,
     asNavFor: '#news_gallery_view',
     focusOnSelect: true
@@ -284,12 +300,22 @@
   var sliders = $('#good_page_sliders_list').children();
   for(var i = 0; i < sliders.length; i++) {
     var slider = $(sliders[i]);
-    slider.find('#product_slick_slider_content').slick({
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      prevArrow: slider.find('#product_slick_slider_prev'),
-      nextArrow: slider.find('#product_slick_slider_next')      
-    });
+    if ($(window).width() > 980) {
+      slider.find('#product_slick_slider_content').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: slider.find('#product_slick_slider_prev'),
+        nextArrow: slider.find('#product_slick_slider_next')      
+      });
+    } else {
+      slider.find('#product_slick_slider_content').slick({
+        infinite: true,
+        slidesToShow: Math.floor($(window).width()/250),
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: false
+      });
+    }
   }
 })();
