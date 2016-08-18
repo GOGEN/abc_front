@@ -286,7 +286,7 @@
   $('a[href^=\\#popup_call]').magnificPopup({
     type:'inline',
     mainClass: 'popup-call-override',
-    fixedContentPos: false
+    fixedContentPos: true
   });
 
   $('a[href^=\\#popup_photo').magnificPopup({
