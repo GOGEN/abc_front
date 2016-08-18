@@ -17,7 +17,7 @@
     height: 100%
     background-color: $white
     transition: all .2s linear
-    
+
     &>a
       display: block
       width: 100%
@@ -34,34 +34,34 @@
       height: 100%
       width: 100px
       background: linear-gradient(left, $white, $white-0)
-      
+
   &__cart
     display: none
-      
+
   &__menu
     margin-left: 230px
     background-color: $white-80
-    
+
     &--solid
       background-color: $white
-      
+
   &__checkbox
     display: none
-    
+
   +above(980px)
     &--sticky
       height: 65px
       background: $white
-      
+
     &--sticky &__logo
       padding-top: 10px
       padding-right: 65px
       padding-bottom: 10px
       width: 230px
       height: 100%
-      
+
     &--sticky &__menu
-      
+
       & .topbar
         padding-top: 0
         padding-bottom: 0
@@ -69,7 +69,7 @@
         opacity: 0
 
   +below(1260px)
-    
+
     &__menu
       margin-left: 200px
 
@@ -84,14 +84,14 @@
       top: 35px
       right: 15px
       z-index: 10
-    
+
     &__menu
       top: 85px
       margin-left: 0
       width: 100%
       overflow-x: hidden
       background-color: $white
-    
+
     &__logo
       position: static
       padding-top: 10px
@@ -99,20 +99,20 @@
       width: 100%
       height: 100px
       text-align: center
-      
+
       &::after
         display: none
-      
+
     &__checkbox
       display: block
       position: absolute
       top: 0
       z-index: 1
-      
+
     &__checkbox:checked + &__menu
       width: 100%
-      
-.slideout-open
+
+.slideout-open body
   padding-top: 85px
 
 .slideout-open .header
