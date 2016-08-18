@@ -317,7 +317,8 @@
 
   $('a[href^=\\#popup_photo').magnificPopup({
     type: 'inline',
-    mainClass: 'popup-photo-override'
+    mainClass: 'popup-photo-override',
+    fixedContentPos: true
   })
 
 })();
