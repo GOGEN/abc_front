@@ -14,7 +14,7 @@
 
   &__catalog
     margin-left: 12%
-    
+
     &__link
       display: block
       height: 36px
@@ -25,7 +25,7 @@
       background: $gray-four img-url("icons/catalog.svg") no-repeat left 25px center
       font-size: 18px
       background-size: 12px 12px
-      
+
       &:hover
         background-color: $gray
 
@@ -33,7 +33,7 @@
     float: right
     margin-right: 90px
     color: $green
-    
+
     & span
       padding-left: 25px
 
@@ -41,7 +41,7 @@
     position: relative
     float: right
     height: 36px
-    
+
     button
       display: block
       position: absolute
@@ -51,7 +51,7 @@
       transition: opacity .3s linear
       opacity: 0
       z-index: -1
-      
+
     button[type="submit"]
       top: 5px
       right: 40px
@@ -59,17 +59,17 @@
       height: 25px
       border-radius(2px)
       background: $white
-    
+
     button[type="reset"]
       top: 7.5px
       right: 10px
       width: 20px
       height: @width
       border-radius(@width)
-      background: $dark-gray img-url("icons/close.svg") no-repeat center center
-      
+      background: $gray-eight img-url("icons/close.svg") no-repeat center center
+
       &:hover
-        background-color: $gray-eight
+        background-color: $dark-gray
 
     input
       position: absolute
@@ -81,7 +81,7 @@
       background: $gray-four img-url("icons/search.svg") no-repeat center center
       transition: width .2s ease-out
       font-size: 0
-      
+
       &:hover
         background-color: $gray
         cursor: pointer
@@ -101,13 +101,13 @@
 
   &__cart
     display: none
-    
+
   +below(1260px)
     padding-left: 35px
-    
+
     &__catalog
       margin-left: 5%
-      
+
   +below(980px)
     display: flex
     flex-wrap: wrap
@@ -116,10 +116,10 @@
     max-height: none
     background-color: $white
     text-align: center
-    
+
     &__cart
       display: none
-    
+
     &__call
       margin-right: 0
       padding: 8px 0
@@ -134,30 +134,30 @@
     &__catalog
       order: 1
       border: 1px solid $gray
-    
+
     &__search,
     &__call,
     &__catalog
       width: 100%
-      
-    &__call 
+
+    &__call
       border: 1px solid $gray
       border-bottom: 0
-      
+
       span
         padding: 0 20px
-        
+
     &__catalog__link
       display: inline-block
       height: 48px
       line-height: @height
       font-size: 18px
       background-color: $white
-      
+
       &:active,
       &:hover
         background-color: $white
-      
+
     &__search
       order: 2
 
@@ -167,11 +167,11 @@
         height: 50px
         background-position: right 20px center
         font-size: 16px
-        
+
         &:focus,
         &:valid
           width: 100%
-          
+
       button[type="submit"],
       button[type="reset"]
         top: 50%

@@ -46,6 +46,6 @@
     type: 'inline',
     mainClass: 'popup-photo-override',
     fixedContentPos: true
-  })
+  });
 
 })();
