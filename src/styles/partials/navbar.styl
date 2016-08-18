@@ -15,6 +15,14 @@
     line-height: @height
     list-style-type: none
     
+    &--desktop-only
+      +below(980px)
+        display: none
+
+    &--mobile-only
+      +above(980px)
+        display: none
+    
     &__secondary
       display: none
     
@@ -161,4 +169,7 @@
         
         &::after
           display: none
+          
+      &--secondary-active>a
+        color: $black
         

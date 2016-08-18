@@ -90,8 +90,10 @@
       width: 50%
 
     &__title
-      min-height: 160px
+      height: 160px
       font-size: 18px
+      line-height: 20px
+      -webkit-line-clamp: 8;
       padding-left: 55%
       
     &__description
@@ -109,3 +111,12 @@
       padding-left: 0
       width: 100%
       text-align: center
+      
+  +below(400px)
+
+    &__title
+      padding-top: 10px
+      padding-bottom: 16px
+      font-size: 16px
+      line-height: 18px
+      -webkit-line-clamp: 8
