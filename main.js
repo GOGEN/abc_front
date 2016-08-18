@@ -285,7 +285,8 @@
 
   $('a[href^=\\#popup_call]').magnificPopup({
     type:'inline',
-    mainClass: 'popup-call-override'
+    mainClass: 'popup-call-override',
+    fixedContentPos: false
   });
 
   $('a[href^=\\#popup_photo').magnificPopup({
@@ -302,19 +303,23 @@
     var slider = $(sliders[i]);
     if ($(window).width() > 980) {
       slider.find('#product_slick_slider_content').slick({
-        infinite: false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         prevArrow: slider.find('#product_slick_slider_prev'),
-        nextArrow: slider.find('#product_slick_slider_next')      
+        nextArrow: slider.find('#product_slick_slider_next'),
+        variableWidth: true,
+        centerMode: true
       });
     } else {
       slider.find('#product_slick_slider_content').slick({
         infinite: true,
-        slidesToShow: Math.floor($(window).width()/250),
+        slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        arrows: false
+        arrows: false,
+        mobileFirst: true,
+        variableWidth: true
       });
     }
   }
