@@ -1,10 +1,10 @@
 
 .carousel
   position: relative
-  
+
   &__item
     position: relative
-    height: 420px
+    height: 415px
     overflow: hidden
 
     img
@@ -41,7 +41,7 @@
       height: @width
       background-color: $white
       cursor: pointer
-      
+
       &:hover
         background-color: $gray
 
@@ -59,30 +59,34 @@
         background-repeat: no-repeat
         background-position: center center
 
-          
-  +below(980px)
-    
+  +above(1920px)
+
     &__item
-      
+      height: 622px
+
+  +below(980px)
+
+    &__item
+
       &__title
         padding-right: 30px
-        
+
         h1
           text-align: center
           font-size: 24px
-          
+
     &__arrows
       bottom: 50%
       width: 100%
-      
+
       &__item
         background-color: transparent
-        
+
         &:hover
           background-color: transparent
-        
+
         &--left
           float: left
-          
+
         &--right
           float: right

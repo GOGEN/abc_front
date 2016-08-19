@@ -2,7 +2,7 @@
 .good-page
   clearfix()
   margin-bottom: 50px
-  
+
   &__header
     padding-top: 45px
     padding-bottom: 20px
@@ -13,30 +13,33 @@
       font-size: 34px
       line-height: 50px
       color: $black
-      
+
     &__back
       margin-top: 25px
-      
+
       a
         display: inline-block
         padding: 10px
         padding-left: 40px
         font-size: 16px
         background: $white img-url("icons/arrow-left-green.svg") no-repeat left 10px center
-  
+
   &__col
     col(540/1110, 3, offset: 0, gutter: 1%)
-    
+
+    &--left img
+      width: 100%
+
     &--right
       padding: 25px
       background: $white
-    
+
   &__cover
     position: relative
     padding-top: 45%
     background-repeat: no-repeat
     background-size: cover
-    
+
     img
       position: absolute
       bottom: 20px
@@ -44,7 +47,7 @@
 
   &__prop
     margin: 20px 0
-    
+
     table
       width: 100%
 
@@ -52,7 +55,7 @@
       display: flex
       justify-content: space-between
       border-bottom: 1px solid $gray-two
-      
+
       &:first-child
         border-color: $black
         margin-bottom: 35px
@@ -61,7 +64,7 @@
 
           &:last-child
             font-size: 24px
-            
+
           &:first-child
             font-size: 16px
 
@@ -69,35 +72,35 @@
       display: block
       padding: 10px 0
       line-height: 1.2rem
-            
+
       &:first-child
         padding-right: 5px
         text-align: left
         color: $gray-seven
-        
+
       &:last-child
         padding-left: 5px
-        text-align: right      
-            
+        text-align: right
+
   &__warehouse
     margin: 20px 0
     padding: 20px 0
-    
+
     &__form
-      
+
       &__frame
         padding: 20px
         border: 2px solid $black
-        
+
       h3
         text-align: center
         font-size: 16px
         color: $gray-seven
-        
+
       &__field
         margin-top: 25px
         text-align: center
-        
+
         label
           display: inline-block
           position: relative
@@ -105,9 +108,9 @@
           padding-left: 35px
           padding-right: 10px
           height: 20px
-          line-height: @height 
+          line-height: @height
           cursor: pointer
-          
+
           &::before
             display: block
             content: ""
@@ -118,65 +121,65 @@
             height: @width
             border: 1px solid $gray-two
             border-radius: 3px
-            
+
         input[type="radio"]
           position: absolute
           opacity: 0
           z-index: -1
-          
+
           &:disabled + label
             color: $gray-seven
-            
+
           &:checked + label:before
             background: img-url("icons/check-icon.svg") no-repeat center center
-            
+
   +below(980px)
     display: flex
     flex-direction: column
     padding: 15px 5px
-    
+
     &__header
       padding: 30px 0
       max-width: initial
       order: 2
-      
+
       h1
         font-size: 22px
         line-height: 2rem
-        
+
       &__back
         display: none
-    
+
     &__col
       float: none
       margin-right: 0
       margin-left: 0
       width: 100%
       order: 1
-      
+
       &--right
         order: 3
-        
+
       &:nth-child(3n)
-        float: none          
+        float: none
 
   +below(680px)
-  
+
     &__col--right
       padding: 0 15px
-      
+
     &__warehouse__form__field
-      
+
       label
         display: block
         text-align: left
-        
+
   +below(400px)
-    
-    &__prop 
-      
+
+    &__prop
+
       td
         font-size: 14px
 
-      tr:first-child 
+      tr:first-child
         margin-bottom: 25px
