@@ -25,6 +25,15 @@
     toggleButton.removeClass('navigation-checkbox-label--open');
   });
 
+  $('[id^="product_slick_slider_item"]')
+    .on('touchstart', function (event) {
+      slideout.disableTouch();
+    });
+
+  $('[id^="product_slick_slider_item"]')
+    .on('touchend', function (event) {
+      slideout.enableTouch();
+    });
+
 })();
 
-      
