@@ -241,15 +241,17 @@
     toggleButton.removeClass('navigation-checkbox-label--open');
   });
 
-  $('[id^="product_slick_slider_item"]')
-    .on('touchstart', function (event) {
+  var selectors = ['[id^="product_slick_slider_item"]', '#carousel', '#news_gallery_view', '#news_gallery_list'];
+
+  selectors.forEach(function (selector) {
+    $(selector).on('touchstart', function (event) {
       slideout.disableTouch();
     });
 
-  $('[id^="product_slick_slider_item"]')
-    .on('touchend', function (event) {
+    $(selector).on('touchend', function (event) {
       slideout.enableTouch();
     });
+  });
 
 })();
 
@@ -274,13 +276,16 @@
   });
 
   gallery.find('#news_gallery_list').slick({
-    slidesToShow: slidesCount,
-    slidesToScroll: slidesCount,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: false,
+    infinite: true,
     asNavFor: '#news_gallery_view',
-    focusOnSelect: true
+    focusOnSelect: true,
+    variableWidth: true
   });
 })();
+
 
 (function () {
   'use strict';
