@@ -291,13 +291,13 @@
   var startWindowScroll = 0;
 
   if (!Modernizr.touchevents) {
-    $('a[href^=\\#popup_call]').magnificPopup({
+    $('a[href^="#popup_call"]').magnificPopup({
       type:'inline',
       mainClass: 'popup-call-override',
       fixedContentPos: true
     });
   } else {
-    $('a[href^=\\#popup_call]').magnificPopup({
+    $('a[href^="#popup_call"]').magnificPopup({
       type:'inline',
       mainClass: 'popup-call-override',
       fixedContentPos: false,
@@ -315,7 +315,7 @@
     });
   }
 
-  $('a[href^=\\#popup_photo').magnificPopup({
+  $('a[href^="#popup_photo"]').magnificPopup({
     type: 'inline',
     mainClass: 'popup-photo-override',
     fixedContentPos: true
@@ -326,35 +326,31 @@
 
 (function () {
   'use strict';
-  setTimeout(function () {
+  $(document).ready(function () {
     var sliders = $('[id^="product_slick_slider_item"]');
     if ($(window).width() > 980) {
       sliders.toArray().forEach(function (slider){
-        setTimeout(function () {
-          $(slider).find('#product_slick_slider_content').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            prevArrow: $(slider).find('#product_slick_slider_prev'),
-            nextArrow: $(slider).find('#product_slick_slider_next'),
-            variableWidth: true,
-            centerMode: true
-          });
-        }, 5000);
+        $(slider).find('#product_slick_slider_content').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: $(slider).find('#product_slick_slider_prev'),
+          nextArrow: $(slider).find('#product_slick_slider_next'),
+          variableWidth: true,
+          centerMode: true
+        });
       });
     } else {
       sliders.toArray().forEach(function (slider) {
-        setTimeout(function () {
-          $(slider).find('#product_slick_slider_content').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: true,
-            arrows: false,
-            variableWidth: true
-          });
-        }, 5000)
+        $(slider).find('#product_slick_slider_content').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          arrows: false,
+          variableWidth: true
+        });
       });
     }
-  }, 5000);
+  });
 })();
