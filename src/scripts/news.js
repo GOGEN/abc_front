@@ -14,10 +14,12 @@
   });
 
   gallery.find('#news_gallery_list').slick({
-    slidesToShow: slidesCount,
-    slidesToScroll: slidesCount,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: false,
+    infinite: true,
     asNavFor: '#news_gallery_view',
-    focusOnSelect: true
+    focusOnSelect: true,
+    variableWidth: true
   });
 })();
