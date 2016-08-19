@@ -341,7 +341,7 @@
         });
       });
     } else {
-      sliders.forEach(function (slider) {
+      sliders.toArray().forEach(function (slider) {
         $(slider).find('#product_slick_slider_content').slick({
           infinite: true,
           slidesToShow: 1,
