@@ -18,13 +18,13 @@
   var startWindowScroll = 0;
 
   if (!Modernizr.touchevents) {
-    $('a[href^=\\#popup_call]').magnificPopup({
+    $('a[href^="#popup_call"]').magnificPopup({
       type:'inline',
       mainClass: 'popup-call-override',
       fixedContentPos: true
     });
   } else {
-    $('a[href^=\\#popup_call]').magnificPopup({
+    $('a[href^="#popup_call"]').magnificPopup({
       type:'inline',
       mainClass: 'popup-call-override',
       fixedContentPos: false,
@@ -42,7 +42,7 @@
     });
   }
 
-  $('a[href^=\\#popup_photo').magnificPopup({
+  $('a[href^="#popup_photo"]').magnificPopup({
     type: 'inline',
     mainClass: 'popup-photo-override',
     fixedContentPos: true
