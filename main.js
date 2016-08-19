@@ -345,7 +345,6 @@
       slidesToScroll: 1,
       centerMode: true,
       arrows: false,
-      mobileFirst: true,
       variableWidth: true
     });
   }
