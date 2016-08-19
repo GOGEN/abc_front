@@ -1,7 +1,7 @@
 
 (function () {
   'use strict';
-  $(document).ready(function () {
+  setTimeout(function () {
     var sliders = $('[id^="product_slick_slider_item"]');
     if ($(window).width() > 980) {
       sliders.toArray().forEach(function (slider){
@@ -31,5 +31,5 @@
         }, 5000)
       });
     }
-  });
+  }, 5000);
 })();
