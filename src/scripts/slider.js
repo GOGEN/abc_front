@@ -21,8 +21,7 @@
       centerMode: true,
       arrows: false,
       mobileFirst: true,
-      variableWidth: true,
-      useTransform: false
+      variableWidth: true
     });
   }
 
