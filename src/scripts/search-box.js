@@ -17,11 +17,19 @@
     event.preventDefault();
   }).on('click', 'button[type="reset"]', function (event) {
     searchBox[0].reset();
+    input.blur();
   }).on('click', 'button[type="submit"]', function (event) {
     searchBox[0].submit();
   }).on('click', 'input', function (event) {
     input.focus();
   });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 65 && input.val() === ''){
+      input.blur();
+    }
+  });
+
 
 
 })();
