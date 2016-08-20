@@ -1,4 +1,20 @@
 
+.topbar-link-catalog
+  display: block
+  height: 36px
+  line-height: @height
+  border-radius(3px)
+  padding-left: 50px
+  padding-right: 25px
+  background: $green-four img-url("icons/catalog-white.svg") no-repeat left 25px center
+  color: $white
+  font-size: 18px
+  background-size: 12px 12px
+  
+  &:hover
+    background-color: $green-five
+
+
 .link-catalog
   display: block
   padding: 0 85px
@@ -13,6 +29,12 @@
   &:hover
     background-color: $green-five
     
+.link-phone
+  color: $green-four
+  
+  &:hover
+    color: $green-five
+    
 
 .link-call
   display: inline-block
@@ -26,6 +48,13 @@
 
   &:hover
     background-color: $gray
+    
+  &--green
+    background-color: $green-four
+    color: $white
+    
+    &:hover
+      background-color: $green-five
     
   +below(980px)
     font-size: 14px

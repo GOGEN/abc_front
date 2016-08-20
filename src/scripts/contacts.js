@@ -11,7 +11,7 @@
 
   function initMap(coord) {
     map.removeAllOverlays();
-    map.setCenter(new YMaps.GeoPoint(coord.lat, coord.long), 8);
+    map.setCenter(new YMaps.GeoPoint(coord.lat, Number.parseFloat(coord.long) + 0.3), 8);
 
     var placemark = new YMaps.Placemark(new YMaps.GeoPoint(coord.lat, coord.long), {style: s});
     map.addOverlay(placemark);

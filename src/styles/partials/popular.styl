@@ -11,25 +11,32 @@
       height: 100%
       font-size: 34px
       text-align: center
-
+      
+  &__footer
+    position: relative
+    height: 135px
+    
     &__catalog
       position: absolute
-      right: 20px
       top: 50%
-      transform: translateY(-50%)
+      left: 50%
+      margin: 0 auto
+      transform: translate(-50%, -50%)
 
   &__list
     clearfix()
 
   &__item
-    span(1/2)
-    margin-top: 10px
+    col(550/1140, 2, offset: 0, gutter: 3%)
+    margin-bottom: 40px
+    // span(1/2)
+    // margin-top: 10px
 
-    &:nth-child(2n)
-      padding-left: 5px
+    // &:nth-child(2n)
+    //   padding-left: 5px
 
-    &:nth-child(2n+1)
-      padding-right: 5px
+    // &:nth-child(2n+1)
+    //   padding-right: 5px
 
   +below(980px)
   
