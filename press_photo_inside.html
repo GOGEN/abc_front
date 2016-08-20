@@ -24,18 +24,18 @@
   <div id="menu" class="header__menu">
     <div class="topbar">
       <div class="topbar__catalog">
-        <a href="catalog.html" class="topbar__catalog__link">Каталог</a>
+        <a href="catalog.html" class="topbar-link-catalog">Каталог</a>
+      </div>
+      <div class="topbar__call">
+        <a href="tel:8 800 555 91 25" class="link-phone">8 800 555 91 25</a>
+        <a href="#popup_call" class="link-call link-call--green">Заказать звонок</a>
       </div>
       <div class="topbar__search">
-        <form name="search-form" action="search.html" novalidate>
+        <form id="search_box" class="topbar__search__form" name="search-form" action="search.html" novalidate>
           <input name="query" type="text" placeholder="Что вы ищите?" required/>
           <button type="submit">Поиск</button>
           <button type="reset"></button>          
         </form>
-      </div>
-      <div class="topbar__call">
-        <a href="#popup_call" class="link-call">Заказать звонок</a>
-        <span>8 800 555 91 25</span>
       </div>
       <div class="topbar__cart">
         <a href="#">
@@ -48,6 +48,9 @@
     </div>
     <nav class="navbar navbar--header">
       <ul class="navbar__list">
+        <li class="navbar__item navbar__item--catalog">
+          <a href="catalog.html" class="topbar-link-catalog">Каталог</a>
+        </li>
         <li class="navbar__item navbar__item--secondary-active navbar__item--active">
           <a href="about.html">О компании</a>
           <div class="navbar__item__secondary">
@@ -79,7 +82,7 @@
           <a href="dealers.html">Дилеры</a>
         </li>
         <li class="navbar__item navbar__item--desktop-only">
-          <a href="#">Пресс-центр</a>
+          <a href="news_list.html">Пресс-центр</a>
           <div class="navbar__item__secondary">
             <div class="second-navbar">
               <ul class="second-navbar__list">
@@ -250,7 +253,7 @@
         <div class="footer__call__action">
           <a href="#popup_call" class="link-call">Заказать звонок</a>
         </div>
-        <div class="footer__call__phone">8 800 555 91 25</div>
+        <div class="footer__call__phone"><a href="tel:8 800 555 91 25" class="link-phone">8 800 555 91 25</a></div>
       </div>
 
       <div class="footer__made-in">
