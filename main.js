@@ -217,6 +217,7 @@
 (function () {
   'use strict';
 
+  var width = $(window).width();
   var slideout;
   var toggleButton = $('.navigation-checkbox-label');
 
@@ -226,7 +227,7 @@
       slideout.destroy();
     }
 
-    if ($(window).width() > 980) {
+    if (width > 980) {
       if (slideout) {
         $(slideout.panel).removeClass('slideout-panel');
         $(slideout.menu).removeClass('slideout-menu');
@@ -237,10 +238,11 @@
     slideout = new Slideout({
       panel: $('.slide-wrapper')[0],
       menu: $('#menu')[0],
-      padding: $(window).width(),
+      padding: width,
       tolerance: 70,
       fx: 'linear',
-      duration: 300
+      duration: 300,
+      touch: false
     });
 
     toggleButton.on('click', slideout.toggle.bind(slideout));
@@ -257,19 +259,11 @@
 
   initSlideout();
 
-  var selectors = ['[id^="product_slick_slider_item"]', '#carousel', '#news_gallery_view', '#news_gallery_list'];
-
-  selectors.forEach(function (selector) {
-    $(selector).on('touchstart', function (event) {
-      slideout.disableTouch();
-    });
-    $(selector).on('touchend', function (event) {
-      slideout.enableTouch();
-    });
-  });
-
-
   $(window).resize(function () {
+    if ($(window).width() === width) {
+      return;
+    }
+    width = $(window).width();
     initSlideout();
   });
 
