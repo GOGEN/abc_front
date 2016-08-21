@@ -7,14 +7,31 @@
     top: 0
     left: 0
     width: 70px
-    height: 70px
+    height: @width
+    padding: 29px 22.5px
     z-index: 10
     cursor: pointer
-    background: $white img-url("icons/burger.png") no-repeat center center
-    background-size: 25px auto
-                
+    background: $white
+
+    span
+     display: block
+     width: 100%
+     height: 2px
+     background: $black
+     transition: all .3s linear
+
+     &:not(:last-child)
+       margin-bottom: 3px
+
 
     &--open
-      background: img-url("icons/rectangle-1.svg") no-repeat center center,
-                  img-url("icons/rectangle-2.svg") no-repeat center center
 
+      span
+        &:first-child
+          transform: translate3d(1px, 5px, 0px) rotate(45deg)
+
+        &:last-child
+          transform: translate3d(1px, -5px, 0px) rotate(-45deg)
+
+        &:nth-child(2)
+          background: $white
