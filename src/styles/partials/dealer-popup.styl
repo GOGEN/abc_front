@@ -4,13 +4,17 @@
   background: $gray
   clearfix()
 
-  &__about
-    padding: 75px 70px 75px 50px
+  &__about,
+  &__contacts
+    padding: 75px 50px
     line-height: 1.4rem
 
+  &__about
+    padding-right: 35px
   &__contacts
-    padding: 75px 50px 75px 0
+    padding-left: 35px
 
+  &__contacts
     &__address
       font-size: 20px
       font-weight: 700
@@ -31,7 +35,12 @@
   &__contacts
     span(1/2)
 
-  +below(600px)
+  +below(980px)
+    &__about,
+    &__contacts
+      padding: 50px 15px
+
+  +below(680px)
     padding-right: 15px
     padding-left: 15px
 
