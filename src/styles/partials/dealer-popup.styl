@@ -1,0 +1,42 @@
+.dealer-popup
+  padding: 35px
+  height: 100%
+  background: $gray
+  clearfix()
+
+  &__about
+    padding: 75px 70px 75px 50px
+    line-height: 1.4rem
+
+  &__contacts
+    padding: 75px 50px 75px 0
+
+    &__address
+      font-size: 20px
+      font-weight: 700
+      line-height: 1.4rem
+
+  h2
+    font-size: 24px
+    text-align: center
+
+  table
+    margin-top: 10p
+  td
+    padding-top: 15px
+    padding-right: 10px
+    vertical-align: top
+
+  &__about,
+  &__contacts
+    span(1/2)
+
+  +below(600px)
+    padding-right: 15px
+    padding-left: 15px
+
+    &__about,
+    &__contacts
+      float: none
+      width: 100%
+      padding: 15px 0

@@ -2,19 +2,6 @@
 (function () {
   'use strict';
 
-  $("a[href^=\\#dealers_popup]").on("click", function(e) {
-    e.preventDefault();
-    history.pushState({}, "", this.href);
-    $(e.delegateTarget.hash).fadeIn("fast");
-
-    $(e.delegateTarget.hash).find("a[id^=\\#dealers_hide_popup]").on("click", function(e2) {
-      e2.preventDefault();
-      history.pushState({}, "", this.href);
-      $(e.delegateTarget.hash).fadeOut("fast");
-    });
-  });
-
-
   var startWindowScroll = 0;
 
   if (!Modernizr.touchevents) {
@@ -47,5 +34,12 @@
     mainClass: 'popup-photo-override',
     fixedContentPos: true
   });
+
+  $('a[href^="#popup_dealer"]').magnificPopup({
+    type: 'inline',
+    mainClass: 'popup-photo-override',
+    fixedContentPos: true
+  });
+
 
 })();
