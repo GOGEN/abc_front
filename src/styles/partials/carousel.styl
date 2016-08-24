@@ -9,8 +9,6 @@
 
     img
       align()
-      min-width: 100%
-      min-height: 100%
 
     &__title
       position: absolute
@@ -60,6 +58,14 @@
 
     &__item
       height: 622px
+
+  +above(1280px)
+    &__item img
+      width: 100%
+
+  +below(1280px)
+    &__item img
+      min-height: 100%
 
   +below(980px)
 
