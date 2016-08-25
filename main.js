@@ -339,7 +339,7 @@
 
   $('a[href^="#popup_dealer"]').magnificPopup({
     type: 'inline',
-    mainClass: 'popup-photo-override',
+    mainClass: 'popup-dealer-override',
     fixedContentPos: true
   });
 
