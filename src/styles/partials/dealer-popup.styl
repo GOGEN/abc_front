@@ -1,28 +1,36 @@
 .dealer-popup
-  padding: 35px
+  padding: 0 25px 25px
   height: 100%
   background: $gray
   clearfix()
+  
+  &__header
+    padding-top: 20px
+    min-height: 100px
+    border-bottom: 1px solid $green-four
+    background: img-url("icons/factory-dealer.svg") no-repeat left top 4px 
+    background-size: 77px 67px
+    
+    h2
+      padding: 25px 90px
+      font-size: 24px
+      text-align: center
 
   &__about,
   &__contacts
-    padding: 75px 50px
+    padding-top: 50px
     line-height: 1.4rem
 
   &__about
-    padding-right: 35px
+    padding-right: 30px
   &__contacts
-    padding-left: 35px
+    padding-left: 30px
 
   &__contacts
     &__address
       font-size: 20px
       font-weight: 700
       line-height: 1.4rem
-
-  h2
-    font-size: 24px
-    text-align: center
 
   table
     margin-top: 10p
@@ -35,14 +43,16 @@
   &__contacts
     span(1/2)
 
-  +below(980px)
-    &__about,
-    &__contacts
-      padding: 50px 15px
-
   +below(680px)
     padding-right: 15px
     padding-left: 15px
+    
+    &__header
+      background-position: top center
+      padding-top: 80px
+      
+      h2
+        padding: 15px 0
 
     &__about,
     &__contacts

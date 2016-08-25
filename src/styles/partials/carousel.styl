@@ -93,3 +93,17 @@
 
         &--right
           float: right
+
+  +below(450px)
+    
+    img.carousel__item__desk-img
+      display: none
+
+    img.carousel__item__mob-img
+      width: auto
+      height: 100%
+     
+  +above(450px)
+
+    img.carousel__item__mob-img
+      display: none
