@@ -96,11 +96,12 @@
   s.iconStyle.size = new YMaps.Point(25, 40);
   s.iconStyle.offset = new YMaps.Point(-12.5, -40);
 
-  function initMap(coord) {
+  function initMap(coord, description) {
     map.removeAllOverlays();
     map.setCenter(new YMaps.GeoPoint(coord.lat, Number.parseFloat(coord.long) + 0.3), 8);
 
     var placemark = new YMaps.Placemark(new YMaps.GeoPoint(coord.lat, coord.long), {style: s});
+    placemark.description = description;
     map.addOverlay(placemark);
   }
 
@@ -121,13 +122,14 @@
           $('#contact_tab_active_arrow').removeClass('contacts__tabs__active__arrow--active');
           $('#contact_tab_menu').removeClass('contacts__tabs__menu--show');
 
-          var coordElem = $(tabMenuItems[j]).find('input[type="hidden"]');
+          var coordElem = $(tabMenuItems[j]).find('input[type="hidden"][name="coords"]');
           if (coordElem[0] === undefined) {
             map.removeAllOverlays();
             return;
           }
           var coord = $(coordElem)[0].value.split(',');
-          initMap({lat: coord[0], long: coord[1]});
+          var descriptionElem = $(tabMenuItems[j]).find('input[type="hidden"][name="description"]');
+          initMap({lat: coord[0], long: coord[1]}, descriptionElem[0] ? descriptionElem[0].value : '');
         }
       }
 
@@ -184,14 +186,16 @@
 
     var map = new YMaps.Map(YMaps.jQuery('#geo_sale_map')[0]);
     map.setCenter(new YMaps.GeoPoint(48.0497534, 56.62054997), 6);
-    var coords = [{lat: 40.90140850, long: 57.77302080},
-                  {lat: 40.99669350, long: 57.00858312},
-                  {lat: 47.90040800, long: 56.62925561},
-                  {lat: 56.23002700, long: 58.02286834},
-                  {lat: 51.52664782, long: 56.25932260},
-                  {lat: 52.95487047, long: 55.98315837},
-                  {lat: 54.00955797, long: 55.26518834},
-                  {lat: 51.91116930, long: 56.95907120}];
+
+    var placemarkElems = $('div[id^="geo-sale_placemark"]');
+    var coordsElems = placemarkElems.find('input[type="hidden"][name="coords"]').toArray();
+    var descriptionsElems = placemarkElems.find('input[type="hidden"][name="description"]').toArray();
+    var placemarksOptions = [];
+    for(var i = 0; i < coordsElems.length; i++) {
+      var coord = coordsElems[i].value.split(',');
+      var description = descriptionsElems[i] ? descriptionsElems[i].value : '';
+      placemarksOptions.push({coord: {lat: coord[0], long: coord[1]}, description: description});
+    }
 
     var s = new YMaps.Style();
     s.iconStyle = new YMaps.IconStyle();
@@ -199,8 +203,10 @@
     s.iconStyle.size = new YMaps.Point(25, 40);
     s.iconStyle.offset = new YMaps.Point(-12.5, -40);
 
-    coords.forEach(function (coord) {
+    placemarksOptions.forEach(function (option) {
+      var coord = option.coord;
       var placemark = new YMaps.Placemark(new YMaps.GeoPoint(coord.lat, coord.long), {style: s});
+      placemark.description = option.description;
       map.addOverlay(placemark);
     });
 
@@ -238,7 +244,7 @@
     slideout = new Slideout({
       panel: $('.slide-wrapper')[0],
       menu: $('#menu')[0],
-      padding: width,
+      padding: width + 15,
       tolerance: 70,
       fx: 'linear',
       duration: 300,
