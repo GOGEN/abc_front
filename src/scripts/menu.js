@@ -22,7 +22,7 @@
     slideout = new Slideout({
       panel: $('.slide-wrapper')[0],
       menu: $('#menu')[0],
-      padding: width,
+      padding: width + 15,
       tolerance: 70,
       fx: 'linear',
       duration: 300,

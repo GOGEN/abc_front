@@ -9,11 +9,12 @@
   s.iconStyle.size = new YMaps.Point(25, 40);
   s.iconStyle.offset = new YMaps.Point(-12.5, -40);
 
-  function initMap(coord) {
+  function initMap(coord, description) {
     map.removeAllOverlays();
     map.setCenter(new YMaps.GeoPoint(coord.lat, Number.parseFloat(coord.long) + 0.3), 8);
 
     var placemark = new YMaps.Placemark(new YMaps.GeoPoint(coord.lat, coord.long), {style: s});
+    placemark.description = description;
     map.addOverlay(placemark);
   }
 
@@ -34,13 +35,14 @@
           $('#contact_tab_active_arrow').removeClass('contacts__tabs__active__arrow--active');
           $('#contact_tab_menu').removeClass('contacts__tabs__menu--show');
 
-          var coordElem = $(tabMenuItems[j]).find('input[type="hidden"]');
+          var coordElem = $(tabMenuItems[j]).find('input[type="hidden"][name="coords"]');
           if (coordElem[0] === undefined) {
             map.removeAllOverlays();
             return;
           }
           var coord = $(coordElem)[0].value.split(',');
-          initMap({lat: coord[0], long: coord[1]});
+          var descriptionElem = $(tabMenuItems[j]).find('input[type="hidden"][name="description"]');
+          initMap({lat: coord[0], long: coord[1]}, descriptionElem[0] ? descriptionElem[0].value : '');
         }
       }
 
