@@ -12,6 +12,9 @@
     var map = new YMaps.Map(YMaps.jQuery('#geo_sale_map')[0]);
     map.setCenter(new YMaps.GeoPoint(48.0497534, 56.62054997), 6);
 
+    var zoom = new YMaps.Zoom();
+    map.addControl(zoom);
+
     var placemarkElems = $('div[id^="geo-sale_placemark"]');
     var coordsElems = placemarkElems.find('input[type="hidden"][name="coords"]').toArray();
     var descriptionsElems = placemarkElems.find('input[type="hidden"][name="description"]').toArray();
