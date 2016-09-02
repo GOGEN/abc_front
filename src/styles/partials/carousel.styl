@@ -4,7 +4,7 @@
 
   &__item
     position: relative
-    height: 415px
+    height: 585px
     overflow: hidden
 
     img
@@ -57,7 +57,7 @@
   +above(1920px)
 
     &__item
-      height: 622px
+      height: 792px
 
   +above(1280px)
     &__item img
@@ -95,14 +95,17 @@
           float: right
 
   +below(450px)
-    
+
+    &__item
+      height: 415px
+
     img.carousel__item__desk-img
       display: none
 
     img.carousel__item__mob-img
       width: auto
       height: 100%
-     
+
   +above(450px)
 
     img.carousel__item__mob-img
